@@ -1,14 +1,15 @@
 import "./App.css";
+import Booklist from "./booklist";
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 function App() {
   return (
-    <>
-      <div>
-        <h1 className="  h-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-red-500">
-          hallo
-        </h1>
-      </div>
-    </>
+    <div className="periplusApp">
+      <Navbar />
+      <Booklist />
+      <Footer />
+    </div>
   );
 }
 
