@@ -1,7 +1,7 @@
 import "./App.css";
-import Booklist from "./booklist";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Booklist from "./booklist/booklist";
+import Navbar from "./navbar/navbar";
+import Footer from "./footer/footer";
 
 function App() {
   return (
