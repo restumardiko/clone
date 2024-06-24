@@ -1,14 +1,21 @@
+import BargainBooks from "./bargainBooks";
+import Categories from "./categories";
+import NewRealease from "./newRealease";
+import PacBarcode from "./pacBarcode";
+import PreOrder from "./preOrder";
+import StoreLocation from "./storeLocation";
+import Wishlist from "./wishlist";
+
 function Subnav() {
   return (
-    <div className="subnav">
-      <p>subnav</p>
+    <div className="flex flex-direction:row bg-white-600">
       <Categories />
       <NewRealease />
-      <Pre-order />
+      <PreOrder />
       <BargainBooks />
       <Wishlist />
       <StoreLocation />
-      <PecBarcode />
+      <PacBarcode />
     </div>
   );
 }
