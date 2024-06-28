@@ -8,7 +8,7 @@ import Wishlist from "./wishlist";
 
 function Subnav() {
   return (
-    <div className="flex flex-direction:row bg-white-600">
+    <div className="flex flex-direction:row bg-yellow-600 text-2xl">
       <Categories />
       <NewRealease />
       <PreOrder />

@@ -1,13 +1,15 @@
 import "./App.css";
-import Booklist from "./booklist/booklist";
+import Content from "./booklist/content";
 import Navbar from "./navbar/navbar";
 import Footer from "./footer/footer";
+import Iklan from "./iklan/iklan";
 
 function App() {
   return (
     <div className="periplusApp">
       <Navbar />
-      <Booklist />
+      <Iklan />
+      <Content />
       <Footer />
     </div>
   );
