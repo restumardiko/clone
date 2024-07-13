@@ -17,8 +17,10 @@ function Input() {
     <div className="flex flex-direction:row mx-20">
       <select name="filter-category" id="">
         <option value="0">All Category</option>
-        <option value="1">Books</option>
-        <option value="2">Magazine</option>
+        <option value="1">fiction</option>
+        <option value="2">business</option>
+        <option value="3">self development</option>
+        <option value="4">parenting</option>
         {/* <option value="3">Toys</option> */}
       </select>
       <div className="input">
