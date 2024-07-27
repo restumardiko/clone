@@ -4,9 +4,12 @@ import BookItem from "./bookItem";
 function Sheet({ sheetName }) {
   return (
     <>
-      <div className="min h-28">
+      <div className="m-16">
         <h1>{sheetName}</h1>
+        <button>LEFT</button>
         <BookItem />
+        <button>right</button>
+        <button>VIEW MORE</button>
       </div>
     </>
   );
