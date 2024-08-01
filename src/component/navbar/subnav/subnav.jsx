@@ -6,12 +6,12 @@ import StoreLocation from "./storeLocation";
 
 function Subnav() {
   return (
-    <div className="flex flex-direction:row bg-yellow-600 text-2xl">
+    <div id="subnav" className="flex flex-direction:row bg-gray-100 text-2xl">
       <Categories />
       <NewRealease />
       <PreOrder />
       <BargainBooks />
-      <StoreLocation />
+      {/* <StoreLocation /> */}
     </div>
   );
 }

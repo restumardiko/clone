@@ -1,5 +1,11 @@
 function PreOrder() {
-  return <h2>Pre-Order</h2>;
+  return (
+    <div id="preorder" className="mx-4">
+      <button>
+        <h2>Pre-Order</h2>
+      </button>
+    </div>
+  );
 }
 
 export default PreOrder;

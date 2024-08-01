@@ -4,7 +4,7 @@ import BookItem from "./bookItem";
 function Sheet({ sheetName }) {
   return (
     <>
-      <div className="m-16">
+      <div className="m-16 bg-gray-200">
         <h1>{sheetName}</h1>
         <button>LEFT</button>
         <BookItem />

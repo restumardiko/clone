@@ -2,10 +2,14 @@ import SheetHov from "./sheetHov";
 
 function BargainBooks() {
   return (
-    <>
-      <h2>Bargain Books</h2>
-      <SheetHov list={["satu", "dua", "tiga"]} />
-    </>
+    <div id="Bargain" className="mx-4">
+      <button>
+        <h2>Bargain Books</h2>
+      </button>
+      <SheetHov
+        list={["under Rp. 50,000", "Rp. 50,000 - 100,000", "above 100,000"]}
+      />
+    </div>
   );
 }
 

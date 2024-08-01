@@ -1,10 +1,10 @@
 function SheetHov({ list }) {
   console.log(list);
+  const ls = list.map((yea) => <li>{yea}</li>);
   return (
-    <ul>
-      <li>{list[0]}</li>
-      <li>{list[1]}</li>
-    </ul>
+    <div className="">
+      <ul>{ls}</ul>
+    </div>
   );
 }
 
