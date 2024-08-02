@@ -2,7 +2,7 @@ import SheetHov from "./sheetHov";
 
 function BargainBooks() {
   return (
-    <div id="Bargain" className="mx-4">
+    <div id="Bargain" className="mx-4 group">
       <button>
         <h2>Bargain Books</h2>
       </button>
