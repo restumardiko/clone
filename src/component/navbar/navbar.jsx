@@ -14,9 +14,11 @@ export default function Navbar() {
             <h2 className="text-2xl">Indonesias largest bookstore</h2>
           </div>
           <Input />
-          <Wishlist />
-          <Chart />
-          <Account />
+          <div className="flex flex-direction:row w-50">
+            <Wishlist />
+            <Chart />
+            <Account />
+          </div>
         </div>
         <Subnav />
       </div>

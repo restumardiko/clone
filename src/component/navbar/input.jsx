@@ -14,7 +14,7 @@ function Input() {
     // handle(search);
   };
   return (
-    <div className="flex flex-direction:row mx-20">
+    <div className="flex flex-direction:row mx-20 my-10">
       <select name="filter-category" id="">
         <option value="0">All Category</option>
         <option value="1">fiction</option>
