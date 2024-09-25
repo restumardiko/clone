@@ -1,13 +1,13 @@
 import BookItem from "./bookItem";
 
 // eslint-disable-next-line react/prop-types
-function Sheet({ sheetName }) {
+function Sheet(props) {
   return (
     <>
       <div className="m-16 bg-gray-200">
-        <h1>{sheetName}</h1>
+        <h1>{props.sheetName}</h1>
         <button>LEFT</button>
-        <BookItem />
+        <BookItem data={props.data} />
         <button>right</button>
         <button>VIEW MORE</button>
       </div>

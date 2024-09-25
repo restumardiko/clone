@@ -1,4 +1,4 @@
-function BookItem() {
+function BookItem({ data, sheetName }) {
   function ActThrough() {
     return (
       <div>
@@ -10,15 +10,28 @@ function BookItem() {
   }
 
   return (
-    <div className="w-40">
-      <h1>image</h1>
-      <h1>book Title</h1>
-      <h1>Author</h1>
-      <h1>Cover Type</h1>
-      <h1>Price</h1>
-      <h1>discount</h1>
+    <>
+      <div>
+        <h2>{sheetName}</h2>
+        <ul>
+          {data.books.map((book) => (
+            <li key={book.id}>
+              <h3>{book.title}</h3>
+              <p>
+                by {book.author} ({book.year})
+              </p>
+              <img
+                src={book.cover}
+                alt={book.title}
+                style={{ width: "150px", height: "200px" }}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <ActThrough />
-    </div>
+    </>
   );
 }
 
