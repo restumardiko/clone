@@ -86,9 +86,9 @@ const data = {
       }
     ],
     "categories": {
-      "newReleases": [1, 2, 7],
-      "bestSellers": [3, 4, 8, 9],
-      "mostWished": [5, 6, 10, 11, 12]
+      newReleases: [1, 2, 7],
+      bestSellers: [3, 4, 8, 9],
+      mostWished: [5, 6, 10, 11, 12]
     }
   }
   

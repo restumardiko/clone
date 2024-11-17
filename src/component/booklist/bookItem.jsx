@@ -1,9 +1,8 @@
 import ActThrough from "./actthrough";
 
-function BookItem({ data, sheetName }) {
+function BookItem({ data }) {
   return (
     <div>
-      <h2>{sheetName}</h2>
       <ul>
         {data.map((book) => {
           return (
