@@ -1,9 +1,11 @@
 import ActThrough from "./actthrough";
 
 function BookItem({ data }) {
+  console.log(data);
   return (
     <div>
-      <ul>
+      {/* <h1>{data}</h1> */}
+      {/* <ul>
         {data.map((book) => {
           return (
             <li key={book.id}>
@@ -12,7 +14,7 @@ function BookItem({ data }) {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 }
