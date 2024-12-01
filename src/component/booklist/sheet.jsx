@@ -2,7 +2,6 @@ import BookItem from "./bookItem";
 
 // eslint-disable-next-line react/prop-types
 function Sheet({ datas, sheetName }) {
-  console.log(datas.books[0]);
   let dat = [];
   if (sheetName === "New Release") {
     datas.categories.newRelease.forEach((element) => {
@@ -13,7 +12,6 @@ function Sheet({ datas, sheetName }) {
       return dat.push(datas.books.filter((book) => book.id === element));
     });
   } else if (sheetName === "Best Seller") {
-    console.log("aw");
     datas.categories.bestSeller.forEach((element) => {
       return dat.push(datas.books.filter((book) => book.id === element));
     });

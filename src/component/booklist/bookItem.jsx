@@ -4,17 +4,15 @@ function BookItem({ data }) {
   console.log(data);
   return (
     <div>
-      {/* <h1>{data}</h1> */}
-      {/* <ul>
-        {data.map((book) => {
-          return (
-            <li key={book.id}>
-              <h1>{book.title}</h1>
-              <ActThrough />
-            </li>
-          );
-        })}
-      </ul> */}
+      <ul>
+        {data.map((book) => (
+          <li key={book[0].id}>
+            <h1>{book[0].title}</h1>
+            <h1>{book[0].author}</h1>
+            <ActThrough />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
