@@ -1,6 +1,6 @@
 function ActThrough() {
   return (
-    <div>
+    <div className="">
       <h1>Buy Now</h1>
       <h1>cart</h1>
       <h1>wishlist</h1>

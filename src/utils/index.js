@@ -1,3 +1,5 @@
+
+
 const data = {
     "books": [
       {
@@ -61,7 +63,7 @@ const data = {
         title: "The Vanishing Half",
         author: "Brit Bennett",
         year: 2020,
-        cover: "https://example.com/vanishinghalf.jpg"
+        cover: "src/utils/kamila.jpg"
       },
       {
         id: 10,

@@ -1,12 +1,12 @@
 import ActThrough from "./actthrough";
 
 function BookItem({ data }) {
-  console.log(data);
   return (
-    <div>
-      <ul>
+    <div className="flex w-3/4 bg-red-400 h-auto">
+      <ul className="flex flex-row flex-grow justify-center h-auto">
         {data.map((book) => (
-          <li key={book[0].id}>
+          <li className=" w-60 h-auto  text-xl m-12" key={book[0].id}>
+            <img className=" w-32 h-48" src={book[0].cover} alt="" />
             <h1>{book[0].title}</h1>
             <h1>{book[0].author}</h1>
             <ActThrough />

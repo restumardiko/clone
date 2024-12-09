@@ -18,11 +18,13 @@ function Sheet({ datas, sheetName }) {
   }
   return (
     <>
-      <div className="m-16 bg-gray-200">
-        <h1>{sheetName}</h1>
-        <button>LEFT</button>
-        <BookItem data={dat} />
-        <button>right</button>
+      <div className="flex flex-col m-16 bg-gray-200 h-auto">
+        <h1 className=" flex justify-center text-6xl">{sheetName}</h1>
+        <div className="flex flex-row justify-between">
+          <button>lef</button>
+          <BookItem data={dat} />
+          <button>ri</button>
+        </div>
         <button>VIEW MORE</button>
       </div>
     </>
