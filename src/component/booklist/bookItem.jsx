@@ -2,7 +2,7 @@ import ActThrough from "./actthrough";
 
 function BookItem({ data }) {
   return (
-    <div className="flex w-3/4 bg-red-400 h-auto">
+    <div className="flex bg-red-400 h-auto">
       <ul className="flex flex-row flex-grow justify-center h-auto">
         {data.map((book) => (
           <li className=" w-60 h-auto  text-xl m-12" key={book[0].id}>
