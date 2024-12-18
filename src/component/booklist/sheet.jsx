@@ -18,17 +18,26 @@ function Sheet({ datas, sheetName }) {
   }
   return (
     <>
-      <div className="flex flex-col m-16 bg-gray-200 h-auto">
-        <h1 className="flex justify-center text-6xl">{sheetName}</h1>
-        {/* <div className="flex flex-row justify-center"> */}
-        <BookItem data={dat} />
-        {/* </div> */}
-
-        <div className="flex justify-center">
-          <button className="inline w-20 h-20">R</button>
-          <button className="inline w-20 h-20">L</button>
+      <div className="flex  justify-center flex-col m-16 bg-gray-200 h-auto">
+        <div className="flex justify-center h-20 ">
+          <h1 className="  text-6xl">{sheetName}</h1>
         </div>
-        <button className="inline w-40 h-20">VIEW MORE</button>
+
+        <BookItem data={dat} />
+
+        <div className="flex justify-center flex-row">
+          <button className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%] bg-white">
+            {"<"}
+          </button>
+          <button className="inline w-20 h-20 rounded-full relative -top-60 right-[-40%]  bg-white">
+            {">"}
+          </button>
+        </div>
+        <div className="flex justify-center">
+          <button className="w-36 h-12 m-4 rounded-full bg-red-600 text-white ">
+            VIEW MORE
+          </button>
+        </div>
       </div>
     </>
   );
