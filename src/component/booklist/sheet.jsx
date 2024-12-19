@@ -1,6 +1,18 @@
 import BookItem from "./bookItem";
 
 // eslint-disable-next-line react/prop-types
+const onRight = (e) => {
+  e.preventDefault();
+  console.log(e);
+  console.log("iclik mas tengen");
+};
+const onLeft = (e) => {
+  e.preventDefault();
+  console.log("iclik mas sng kiwa");
+};
+const onViewMore = (e) => {
+  console.log("iclik mas view more");
+};
 function Sheet({ datas, sheetName }) {
   let dat = [];
   if (sheetName === "New Release") {
@@ -18,23 +30,32 @@ function Sheet({ datas, sheetName }) {
   }
   return (
     <>
-      <div className="flex  justify-center flex-col m-16 bg-gray-200 h-auto">
+      <div className="flex   flex-col m-16 bg-gray-200 h-auto items-center ">
         <div className="flex justify-center h-20 ">
           <h1 className="  text-6xl">{sheetName}</h1>
         </div>
 
         <BookItem data={dat} />
 
-        <div className="flex justify-center flex-row">
-          <button className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%] bg-white">
+        <div className="flex justify-center flex-row w-[100%]">
+          <button
+            onClick={onLeft}
+            className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%]  text-4xl pb-2 bg-white"
+          >
             {"<"}
           </button>
-          <button className="inline w-20 h-20 rounded-full relative -top-60 right-[-40%]  bg-white">
+          <button
+            onClick={onRight}
+            className="inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-4xl pb-2 bg-white"
+          >
             {">"}
           </button>
         </div>
         <div className="flex justify-center">
-          <button className="w-36 h-12 m-4 rounded-full bg-red-600 text-white ">
+          <button
+            onClick={onViewMore}
+            className="w-36 h-12 m-4 rounded-full bg-red-600 text-white "
+          >
             VIEW MORE
           </button>
         </div>
