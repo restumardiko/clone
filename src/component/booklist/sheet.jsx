@@ -40,13 +40,13 @@ function Sheet({ datas, sheetName }) {
         <div className="flex justify-center flex-row w-[100%]">
           <button
             onClick={onLeft}
-            className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%]  text-4xl pb-2 bg-white"
+            className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%] -translate-y-1/2 text-5xl pb-2 bg-white"
           >
             {"<"}
           </button>
           <button
             onClick={onRight}
-            className="inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-4xl pb-2 bg-white"
+            className="inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-5xl -translate-y-1/2 pb-2 bg-white"
           >
             {">"}
           </button>
