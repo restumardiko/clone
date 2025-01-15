@@ -1,10 +1,14 @@
 import ActThrough from "./actthrough";
 
-function BookItem({ data }) {
+function BookItem({ data, hem }) {
+  console.log(hem);
   return (
     <div className="flex bg-red-400 h-auto w-2/3 overflow-hidden justify-center  ">
       <ul
         id="slide-left"
+        style={{
+          transform: `translateX(-${hem * 100}%)`,
+        }}
         className="flex flex-row transition-transform duration-500 flex-grow justify-center h-auto"
       >
         {data.map((book) => (

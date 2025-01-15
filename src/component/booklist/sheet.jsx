@@ -1,19 +1,31 @@
+import { useState } from "react";
 import BookItem from "./bookItem";
 
 // eslint-disable-next-line react/prop-types
-const onRight = (e) => {
-  e.preventDefault();
-  console.log(e);
-  console.log("iclik mas tengen");
-};
-const onLeft = (e) => {
-  e.preventDefault();
-  console.log("iclik mas sng kiwa");
-};
-const onViewMore = (e) => {
+
+const onViewMore = () => {
   console.log("iclik mas view more");
 };
 function Sheet({ datas, sheetName }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = (e) => {
+    e.preventDefault();
+    console.log("iclik mas sng kiwa");
+    setCurrentIndex((prev) => {
+      if (prev === 0) {
+        return datas.books.length - 1;
+      } else {
+        prev - 1;
+      }
+    });
+  };
+  const handleNext = (e) => {
+    e.preventDefault();
+    console.log(e);
+    console.log("iclik mas tengen");
+    setCurrentIndex((prev) => (prev === datas.books.length - 1 ? 0 : prev + 1));
+  };
   let dat = [];
   if (sheetName === "New Release") {
     datas.categories.newRelease.forEach((element) => {
@@ -35,17 +47,17 @@ function Sheet({ datas, sheetName }) {
           <h1 className="  text-6xl">{sheetName}</h1>
         </div>
 
-        <BookItem data={dat} />
+        <BookItem data={dat} hem={currentIndex} />
 
         <div className="flex justify-center flex-row w-[100%]">
           <button
-            onClick={onLeft}
+            onClick={handlePrev}
             className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%] -translate-y-1/2 text-5xl pb-2 bg-white"
           >
             {"<"}
           </button>
           <button
-            onClick={onRight}
+            onClick={handleNext}
             className="inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-5xl -translate-y-1/2 pb-2 bg-white"
           >
             {">"}
