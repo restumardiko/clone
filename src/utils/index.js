@@ -91,7 +91,7 @@ const data = {
       // newRelease: [1, 2, 7],
       // bestSeller: [3, 4, 8, 9],
       // mostWished: [5, 6, 10, 11, 12]
-      newRelease: [1, 2,3,4,5,6,7,8,9,10,11,12],
+      newRelease: [1,2,3,4,5,6,7,8,9,10,11,12],
       bestSeller: [1,2,3,4,5,6,7,8,9,10,11,12],
       mostWished: [1,2,3,4,5,6,7,8,9,10,11,12],
     }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BookItem from "./bookItem";
 
 // eslint-disable-next-line react/prop-types
@@ -8,7 +8,14 @@ const onViewMore = () => {
 };
 function Sheet({ datas, sheetName }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === datas.books.length - 1 ? 0 : prev + 1
+      );
+    }, 10000);
+    return () => clearInterval(interval); // Clear interval when component unmounts
+  }, [datas.books]);
   const handlePrev = (e) => {
     e.preventDefault();
     console.log("iclik mas sng kiwa");
@@ -16,7 +23,7 @@ function Sheet({ datas, sheetName }) {
       if (prev === 0) {
         return datas.books.length - 1;
       } else {
-        prev - 1;
+        return prev - 1;
       }
     });
   };
