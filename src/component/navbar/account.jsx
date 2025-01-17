@@ -5,11 +5,9 @@ function onAccount(e) {
 
 function Account() {
   return (
-    <>
-      <button onClick={onAccount} className="p-6 text-5xl">
-        🙂
-      </button>
-    </>
+    <button onClick={onAccount} className="p-6 text-5xl hover:">
+      🙂
+    </button>
   );
 }
 

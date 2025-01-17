@@ -13,12 +13,13 @@ function Sheet({ datas, sheetName }) {
       setCurrentIndex((prev) =>
         prev === datas.books.length - 1 ? 0 : prev + 1
       );
-    }, 10000);
+    }, 1000000);
     return () => clearInterval(interval); // Clear interval when component unmounts
   }, [datas.books]);
   const handlePrev = (e) => {
     e.preventDefault();
     console.log("iclik mas sng kiwa");
+
     setCurrentIndex((prev) => {
       if (prev === 0) {
         return datas.books.length - 1;
@@ -29,7 +30,6 @@ function Sheet({ datas, sheetName }) {
   };
   const handleNext = (e) => {
     e.preventDefault();
-    console.log(e);
     console.log("iclik mas tengen");
     setCurrentIndex((prev) => (prev === datas.books.length - 1 ? 0 : prev + 1));
   };
