@@ -6,7 +6,7 @@ import BookItem from "./bookItem";
 const onViewMore = () => {
   console.log("iclik mas view more");
 };
-function Sheet({ datas, sheetName }) {
+function Sheet({ datas, sheetName, handleBuyNow }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -54,7 +54,7 @@ function Sheet({ datas, sheetName }) {
           <h1 className="  text-6xl">{sheetName}</h1>
         </div>
 
-        <BookItem data={dat} hem={currentIndex} />
+        <BookItem data={dat} hem={currentIndex} handleBuyNow={handleBuyNow} />
 
         <div className="flex justify-center flex-row w-[100%]">
           <button

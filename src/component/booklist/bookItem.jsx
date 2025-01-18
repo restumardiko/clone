@@ -1,13 +1,4 @@
-function BookItem({ data, hem }) {
-  const handelCart = (param) => {
-    console.log(param);
-  };
-  const handleBuyNow = (param) => {
-    console.log(param);
-  };
-  const handleWish = (param) => {
-    console.log(param);
-  };
+function BookItem({ data, hem, handleBuyNow }) {
   console.log(hem);
   return (
     <div className="flex h-auto w-2/3 overflow-hidden justify-center  ">

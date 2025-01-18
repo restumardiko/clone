@@ -6,11 +6,25 @@ import Iklan from "./iklan/iklan";
 import data from "../utils";
 
 function App() {
+  const handelCart = (param) => {
+    console.log(param);
+  };
+  const handleBuyNow = (param) => {
+    console.log(param);
+  };
+  const handleWish = (param) => {
+    console.log(param);
+  };
   return (
     <div className="periplusApp">
       <Navbar />
       <Iklan />
-      <Content data={data} />
+      <Content
+        data={data}
+        handleCart={handelCart}
+        handleBuyNow={handleBuyNow}
+        handleWish={handleWish}
+      />
       <Footer />
     </div>
   );
