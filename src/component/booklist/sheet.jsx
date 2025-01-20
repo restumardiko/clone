@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import BookItem from "./bookItem";
 
-// eslint-disable-next-line react/prop-types
-
 const onViewMore = () => {
   console.log("iclik mas view more");
 };

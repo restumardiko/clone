@@ -1,4 +1,8 @@
-function BookItem({ data, hem, handleBuyNow }) {
+import { useContext } from "react";
+import { BookContext } from "../App";
+
+function BookItem({ data, hem }) {
+  const { handelCart, handleBuyNow, handleWish } = useContext(BookContext);
   console.log(hem);
   return (
     <div className="flex h-auto w-2/3 overflow-hidden justify-center  ">
