@@ -4,7 +4,7 @@ import Subnav from "./subnav/subnav";
 import Wishlist from "./wishlist";
 import Account from "./account";
 
-export default function Navbar() {
+export default function Navbar({ cart }) {
   return (
     <>
       <div id="nav-container" className="relative z-50">
@@ -16,7 +16,7 @@ export default function Navbar() {
           <Input />
           <div className="flex flex-direction:row w-50">
             <Wishlist />
-            <Chart />
+            <Chart cart={cart} />
             <Account />
           </div>
         </div>

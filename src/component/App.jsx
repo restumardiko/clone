@@ -4,15 +4,19 @@ import Navbar from "./navbar/navbar";
 import Footer from "./footer/footer";
 import Iklan from "./iklan/iklan";
 import data from "../utils";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 export const BookContext = createContext();
 
 function App() {
+  const [cart, setCart] = useState([]);
+
   const handelCart = (param) => {
-    console.log(param);
+    setCart((prevCart) => {
+      return [...prevCart, param];
+    });
   };
   const handleBuyNow = (param) => {
-    console.log(param);
+    console.log();
   };
   const handleWish = (param) => {
     console.log(param);
@@ -21,7 +25,7 @@ function App() {
   return (
     <BookContext.Provider value={{ handelCart, handleBuyNow, handleWish }}>
       <div className="periplusApp">
-        <Navbar />
+        <Navbar cart={cart} />
         <Iklan />
         <Content data={data} />
         <Footer />
