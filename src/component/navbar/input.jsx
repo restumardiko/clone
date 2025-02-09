@@ -26,7 +26,9 @@ function Input() {
       <div className="input">
         <form onSubmit={handleClick}>
           <input className="h-14 w-80" type="text" onChange={handleChange} />
-          <button type="submit">CARI</button>
+          <button type="submit" className="text-4xl">
+            🔍
+          </button>
         </form>
       </div>
     </div>

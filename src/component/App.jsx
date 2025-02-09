@@ -1,10 +1,13 @@
 import "./App.css";
-import Content from "./booklist/content";
+// import Content from "./booklist/content";
 import Navbar from "./navbar/navbar";
 import Footer from "./footer/footer";
-import Iklan from "./iklan/iklan";
-import data from "../utils";
+import Container from "./containContainer";
+
+// import Iklan from "./iklan/iklan";
+// import data from "../utils";
 import { createContext, useState } from "react";
+//import { Container } from "postcss";
 export const BookContext = createContext();
 
 function App() {
@@ -26,8 +29,7 @@ function App() {
     <BookContext.Provider value={{ handelCart, handleBuyNow, handleWish }}>
       <div className="periplusApp">
         <Navbar cart={cart} />
-        <Iklan />
-        <Content data={data} />
+        <Container />
         <Footer />
       </div>
     </BookContext.Provider>

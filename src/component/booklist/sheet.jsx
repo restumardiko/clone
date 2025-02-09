@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import BookItem from "./bookItem";
 
-const onViewMore = () => {
-  console.log("iclik mas view more");
-};
-function Sheet({ datas, sheetName, handleBuyNow }) {
+function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,6 +42,7 @@ function Sheet({ datas, sheetName, handleBuyNow }) {
       return dat.push(datas.books.filter((book) => book.id === element));
     });
   }
+
   return (
     <>
       <div className="flex   flex-col m-16 bg-gray-200 h-auto items-center ">
@@ -70,6 +68,7 @@ function Sheet({ datas, sheetName, handleBuyNow }) {
         </div>
         <div className="flex justify-center">
           <button
+            id={sheetName}
             onClick={onViewMore}
             className="w-36 h-12 m-4 rounded-full bg-red-600 text-white "
           >
