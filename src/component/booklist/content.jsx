@@ -5,9 +5,24 @@ export default function Content({ data, onViewMore, spread }) {
   if (spread === "spread") {
     return (
       <>
-        <Sheet sheetName="New Release" datas={data} onViewMore={onViewMore} />
-        <Sheet sheetName="Best Seller" datas={data} onViewMore={onViewMore} />
-        <Sheet sheetName="Most Wished" datas={data} onViewMore={onViewMore} />
+        <Sheet
+          sheetName="New Release"
+          datas={data}
+          onViewMore={onViewMore}
+          spread={spread}
+        />
+        <Sheet
+          sheetName="Best Seller"
+          datas={data}
+          onViewMore={onViewMore}
+          spread={spread}
+        />
+        <Sheet
+          sheetName="Most Wished"
+          datas={data}
+          onViewMore={onViewMore}
+          spread={spread}
+        />
       </>
     );
   } else if (spread === "New Release") {

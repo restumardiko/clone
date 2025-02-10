@@ -5,6 +5,7 @@ import { createContext, useState } from "react";
 
 function Container() {
   const [spread, setSpread] = useState("spread");
+  console.log(spread);
 
   const onViewMore = (e) => {
     console.log(e.target);

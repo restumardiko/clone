@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BookItem from "./bookItem";
 
 function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
+  console.log(spread);
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -11,8 +12,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
     }, 1000000);
     return () => clearInterval(interval); // Clear interval when component unmounts
   }, [datas.books]);
-  const handlePrev = (e) => {
-    e.preventDefault();
+  const handlePrev = () => {
+    //e.preventDefault();
     console.log("iclik mas sng kiwa");
 
     setCurrentIndex((prev) => {
@@ -23,8 +24,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
       }
     });
   };
-  const handleNext = (e) => {
-    e.preventDefault();
+  const handleNext = () => {
+    // e.preventDefault();
     console.log("iclik mas tengen");
     setCurrentIndex((prev) => (prev === datas.books.length - 1 ? 0 : prev + 1));
   };
@@ -72,7 +73,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             onClick={onViewMore}
             className="w-36 h-12 m-4 rounded-full bg-red-600 text-white "
           >
-            VIEW MORE
+            {spread}
           </button>
         </div>
       </div>
