@@ -9,19 +9,19 @@ export default function Content({ data, onViewMore, spread }) {
           sheetName="New Release"
           datas={data}
           onViewMore={onViewMore}
-          spread={spread}
+          spread="View More"
         />
         <Sheet
           sheetName="Best Seller"
           datas={data}
           onViewMore={onViewMore}
-          spread={spread}
+          spread="View More"
         />
         <Sheet
           sheetName="Most Wished"
           datas={data}
           onViewMore={onViewMore}
-          spread={spread}
+          spread="View More"
         />
       </>
     );
@@ -31,7 +31,7 @@ export default function Content({ data, onViewMore, spread }) {
         sheetName="New Release"
         datas={data}
         onViewMore={onViewMore}
-        spread={spread}
+        spread="View Less"
       />
     );
   } else if (spread === "Best Seller") {
@@ -40,7 +40,7 @@ export default function Content({ data, onViewMore, spread }) {
         sheetName="Best Seller"
         datas={data}
         onViewMore={onViewMore}
-        spread={spread}
+        spread="View Less"
       />
     );
   } else if (spread === "Most Wished") {
@@ -49,7 +49,7 @@ export default function Content({ data, onViewMore, spread }) {
         sheetName="Most Wished"
         datas={data}
         onViewMore={onViewMore}
-        spread={spread}
+        spread="View Less"
       />
     );
   }

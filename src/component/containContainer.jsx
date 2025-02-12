@@ -9,12 +9,18 @@ function Container() {
 
   const onViewMore = (e) => {
     console.log(e.target);
+    if (spread === "spread") {
+      const etok = e.target.id;
+      setSpread(() => {
+        return etok;
+      });
+    } else if (spread !== "spread") {
+      setSpread(() => {
+        return "spread";
+      });
+    }
 
     // console.log(typeof e.target.id);
-    const etok = e.target.id;
-    setSpread(() => {
-      return etok;
-    });
   };
   if (spread === "spread") {
     return (
