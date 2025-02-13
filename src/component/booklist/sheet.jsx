@@ -3,6 +3,8 @@ import BookItem from "./bookItem";
 
 function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   console.log(spread);
+  let isSpread = spread === "View More" ? true : false;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,23 +48,36 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex   flex-col m-16 bg-gray-200 h-auto items-center ">
+      <div className="flex   flex-col m-16 bg-white h-auto items-center ">
         <div className="flex justify-center h-20 ">
           <h1 className="  text-6xl">{sheetName}</h1>
         </div>
 
-        <BookItem data={dat} hem={currentIndex} handleBuyNow={handleBuyNow} />
+        <BookItem
+          data={dat}
+          hem={currentIndex}
+          handleBuyNow={handleBuyNow}
+          spread={spread}
+        />
 
         <div className="flex justify-center flex-row w-[100%]">
           <button
             onClick={handlePrev}
-            className="inline w-20 h-20 rounded-full relative -top-60 left-[-40%] -translate-y-1/2 text-5xl pb-2 bg-white"
+            className={
+              isSpread
+                ? "inline w-20 h-20 rounded-full relative -top-60 left-[-40%] -translate-y-1/2 text-5xl pb-2 bg-white "
+                : "hidden"
+            }
           >
             {"<"}
           </button>
           <button
             onClick={handleNext}
-            className="inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-5xl -translate-y-1/2 pb-2 bg-white"
+            className={
+              isSpread
+                ? "inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-5xl -translate-y-1/2 pb-2 bg-white"
+                : "hidden"
+            }
           >
             {">"}
           </button>
