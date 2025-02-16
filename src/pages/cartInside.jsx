@@ -1,3 +1,3 @@
-function CartInside() {
+export default function CartInside() {
   return <h1>halaman cartInside</h1>;
 }

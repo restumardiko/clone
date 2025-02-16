@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+
 function onAccount(e) {
-  e.preventDefault();
   console.log("onAccount clicked");
 }
 
 function Account() {
   return (
-    <button onClick={onAccount} className="p-6 text-5xl hover:">
-      🙂
-    </button>
+    <Link to="/account">
+      <button onClick={onAccount} className="p-6 text-5xl hover:">
+        🙂
+      </button>
+    </Link>
   );
 }
 

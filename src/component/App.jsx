@@ -1,8 +1,9 @@
 import "./App.css";
 // import Content from "./booklist/content";
 import Navbar from "./navbar/navbar";
-import Footer from "./footer/footer";
-import Container from "./containContainer";
+import Conconfoot from "./conconfoot";
+// import Footer from "./footer/footer";
+// import Container from "./containContainer";
 
 // import Iklan from "./iklan/iklan";
 // import data from "../utils";
@@ -11,6 +12,8 @@ import { createContext, StrictMode, useState } from "react";
 export const BookContext = createContext();
 import { Route, Routes } from "react-router-dom";
 import WishListInside from "../pages/wishlistInside";
+import CartInside from "../pages/cartInside";
+import AccountInside from "../pages/accountInside";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -32,11 +35,11 @@ function App() {
       <div className="periplusApp">
         <Navbar cart={cart} />
         <Routes>
+          <Route path="/" element={<Conconfoot />} />
           <Route path="/wishlist" element={<WishListInside />} />
-          <Route path="" />
+          <Route path="/cart" element={<CartInside />} />
+          <Route path="/account" element={<AccountInside />} />
         </Routes>
-        {/* <Container />
-        <Footer /> */}
       </div>
     </BookContext.Provider>
   );
