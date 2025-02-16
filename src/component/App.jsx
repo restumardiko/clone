@@ -6,9 +6,11 @@ import Container from "./containContainer";
 
 // import Iklan from "./iklan/iklan";
 // import data from "../utils";
-import { createContext, useState } from "react";
+import { createContext, StrictMode, useState } from "react";
 //import { Container } from "postcss";
 export const BookContext = createContext();
+import { Route, Routes } from "react-router-dom";
+import WishListInside from "../pages/wishlistInside";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -29,8 +31,12 @@ function App() {
     <BookContext.Provider value={{ handelCart, handleBuyNow, handleWish }}>
       <div className="periplusApp">
         <Navbar cart={cart} />
-        <Container />
-        <Footer />
+        <Routes>
+          <Route path="/wishlist" element={<WishListInside />} />
+          <Route path="" />
+        </Routes>
+        {/* <Container />
+        <Footer /> */}
       </div>
     </BookContext.Provider>
   );

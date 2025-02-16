@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 function onCart(e) {
-  e.preventDefault();
+  //e.preventDefault();
   console.log("cart clicked");
 }
 
@@ -8,9 +10,11 @@ function Cart({ cart }) {
   return (
     <div className="group">
       <h1>{cart.length}</h1>
-      <button onClick={onCart} className="text-5xl p-6">
-        🛒
-      </button>
+      <Link to="/wishlist">
+        <button onClick={onCart} className="text-5xl p-6">
+          🛒
+        </button>
+      </Link>
       <div
         id="drop-down"
         className="absolute bg-red-500 w-80  top-50 mt-20 group-hover:block hidden -z-10"
