@@ -10,7 +10,7 @@ function Cart({ cart }) {
       </Link>
       <div
         id="drop-down"
-        className="absolute bg-red-500 w-80  top-50 mt-20 group-hover:block hidden -z-10"
+        className="absolute bg-red-500 w-80 top-24 mt-20 group-hover:block hidden z-10"
       >
         <div id="drop-down-header" className="block">
           <h1 className="inline-block">{cart.length} Items</h1>

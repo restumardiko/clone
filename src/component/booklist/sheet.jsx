@@ -11,7 +11,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
       setCurrentIndex((prev) =>
         prev === datas.books.length - 1 ? 0 : prev + 1
       );
-    }, 1000000);
+    }, 100000);
     return () => clearInterval(interval); // Clear interval when component unmounts
   }, [datas.books]);
   const handlePrev = () => {

@@ -37,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Conconfoot />} />
           <Route path="/wishlist" element={<WishListInside />} />
-          <Route path="/cart" element={<CartInside />} />
+          <Route path="/cart" element={<CartInside cart={cart} />} />
           <Route path="/account" element={<AccountInside />} />
         </Routes>
       </div>
