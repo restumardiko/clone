@@ -17,6 +17,10 @@ import AccountInside from "../pages/accountInside";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const handleRemove = (id) => {
+    console.log("this fucking button remove is clicked");
+    setCart(cart.filter((book) => book.id !== id));
+  };
 
   const handelCart = (param) => {
     setCart((prevCart) => {
@@ -37,7 +41,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Conconfoot />} />
           <Route path="/wishlist" element={<WishListInside />} />
-          <Route path="/cart" element={<CartInside cart={cart} />} />
+          <Route
+            path="/cart"
+            element={<CartInside cart={cart} handleRemove={handleRemove} />}
+          />
           <Route path="/account" element={<AccountInside />} />
         </Routes>
       </div>

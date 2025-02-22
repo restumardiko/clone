@@ -7,84 +7,108 @@ const data = {
         title: "The Invisible Life of Addie LaRue",
         author: "V.E. Schwab",
         year: 2020,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 2,
         title: "Project Hail Mary",
         author: "Andy Weir",
         year: 2021,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 3,
         title: "The Midnight Library",
         author: "Matt Haig",
         year: 2020,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 4,
         title: "Where the Crawdads Sing",
         author: "Delia Owens",
         year: 2018,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 5,
         title: "Atomic Habits",
         author: "James Clear",
         year: 2018,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 6,
         title: "Becoming",
         author: "Michelle Obama",
         year: 2018,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 7,
         title: "The Four Winds",
         author: "Kristin Hannah",
         year: 2021,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 8,
         title: "Dune",
         author: "Frank Herbert",
         year: 1965,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 9,
         title: "The Vanishing Half",
         author: "Brit Bennett",
         year: 2020,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 10,
         title: "Educated",
         author: "Tara Westover",
         year: 2018,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 11,
         title: "The Silent Patient",
         author: "Alex Michaelides",
         year: 2019,
-         cover: "src/Time Travel Books.jpg"
+         cover: "src/Time Travel Books.jpg",
+        price:200000
+
       },
       {
         id: 12,
         title: "Circe",
         author: "Madeline Miller",
         year: 2018,
-        cover: "src/Time Travel Books.jpg"
+        cover: "src/Time Travel Books.jpg",
+        price:200000
+        
       }
     ],
     categories: {
