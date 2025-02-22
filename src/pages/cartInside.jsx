@@ -4,13 +4,26 @@ import { useState } from "react";
 
 export default function CartInside({ cart, handleRemove }) {
   console.log("sikamanis", cart);
-  const [quantity, setQuantity] = useState();
-
-  function plus() {
-    console.log("plus");
+  function getInitialCartData(cart) {
+    const initialDataCart = {};
+    cart.forEach((element) => {
+      initialDataCart[element.id] = 1;
+    });
+    return initialDataCart;
   }
-  function minus() {
+  const [quantity, setQuantity] = useState(getInitialCartData(cart));
+
+  function plus(id) {
+    console.log("plus");
+    console.log(quantity[id]);
+    setQuantity((ea) => {
+      return { ...ea, [id]: ea[id] + 1 };
+    });
+  }
+
+  function minus(id) {
     console.log("minus");
+    console.log(id);
   }
   function checkout() {
     console.log("checkout");
@@ -45,11 +58,21 @@ export default function CartInside({ cart, handleRemove }) {
                     <h1>Rp.{book.price}</h1>
                   </div>
                   <div id="how-much-item" className="">
-                    <button onClick={minus} id="decrease-item">
+                    <button
+                      onClick={() => {
+                        minus(book.id);
+                      }}
+                      id="decrease-item"
+                    >
                       -
                     </button>
-                    <input type="text" value={1} readOnly />
-                    <button onClick={plus} id="increase-item">
+                    <h1>{quantity[book.id]}</h1>
+                    <button
+                      onClick={() => {
+                        plus(book.id);
+                      }}
+                      id="increase-item"
+                    >
                       +
                     </button>
                   </div>
