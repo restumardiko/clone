@@ -24,6 +24,11 @@ export default function CartInside({ cart, handleRemove }) {
   function minus(id) {
     console.log("minus");
     console.log(id);
+    console.log("plus");
+    console.log(quantity[id]);
+    setQuantity((ea) => {
+      return { ...ea, [id]: Math.max(ea[id] - 1, 1) };
+    });
   }
   function checkout() {
     console.log("checkout");
