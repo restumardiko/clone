@@ -17,7 +17,7 @@ const data = {
         author: "Andy Weir",
         year: 2021,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:250000
 
       },
       {
@@ -26,7 +26,7 @@ const data = {
         author: "Matt Haig",
         year: 2020,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:290000
 
       },
       {
@@ -35,7 +35,7 @@ const data = {
         author: "Delia Owens",
         year: 2018,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:300000
 
       },
       {
@@ -53,7 +53,7 @@ const data = {
         author: "Michelle Obama",
         year: 2018,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:280000
 
       },
       {
@@ -62,7 +62,7 @@ const data = {
         author: "Kristin Hannah",
         year: 2021,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:240000
 
       },
       {
@@ -71,7 +71,7 @@ const data = {
         author: "Frank Herbert",
         year: 1965,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:220000
 
       },
       {
@@ -80,7 +80,7 @@ const data = {
         author: "Brit Bennett",
         year: 2020,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:100000
 
       },
       {
@@ -89,7 +89,7 @@ const data = {
         author: "Tara Westover",
         year: 2018,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:340000
 
       },
       {
@@ -98,7 +98,7 @@ const data = {
         author: "Alex Michaelides",
         year: 2019,
          cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:210000
 
       },
       {
@@ -107,7 +107,7 @@ const data = {
         author: "Madeline Miller",
         year: 2018,
         cover: "src/Time Travel Books.jpg",
-        price:200000
+        price:400000
         
       }
     ],

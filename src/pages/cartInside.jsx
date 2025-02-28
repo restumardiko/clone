@@ -16,6 +16,7 @@ export default function CartInside({ cart, handleRemove }) {
   function plus(id) {
     console.log("plus");
     console.log(quantity[id]);
+    console.log(quantity);
     setQuantity((ea) => {
       return { ...ea, [id]: ea[id] + 1 };
     });
@@ -32,7 +33,14 @@ export default function CartInside({ cart, handleRemove }) {
   }
   function checkout() {
     console.log("checkout");
+    console.log(quantity);
   }
+  let harga = 0;
+  cart.map((each) => {
+    // console.log(quantity[each.id]);
+    console.log(quantity[each.id] * each.price);
+    harga += quantity[each.id] * each.price;
+  });
 
   return (
     <>
@@ -95,7 +103,7 @@ export default function CartInside({ cart, handleRemove }) {
             </ul>
 
             <div id="total-amount" className="h-44 bg-gray-200 m-20 mt-3">
-              <h1>Total :</h1>
+              <h1>Total :{harga}</h1>
               <button onClick={checkout}>CHECK OUT</button>
             </div>
           </>

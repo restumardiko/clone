@@ -24,7 +24,8 @@ function App() {
 
   const handelCart = (param) => {
     setCart((prevCart) => {
-      return [...prevCart, param];
+      const isSame = prevCart.some((item) => item.id == param.id);
+      return isSame ? prevCart : [...prevCart, param];
     });
   };
   const handleBuyNow = (param) => {
