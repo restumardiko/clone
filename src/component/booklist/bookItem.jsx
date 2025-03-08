@@ -48,6 +48,8 @@ function BookItem({ data, hem, spread }) {
               <img className=" w-32 h-48" src={book[0].cover} alt="" />
               <h1>{book[0].title}</h1>
               <h1>{book[0].author}</h1>
+
+              <h2>Rp.{book[0].price.toString()}</h2>
               <h2>{book[0].year}</h2>
               <div className="mt-40 group-hover:mt-2 ease-in duration-300 ">
                 <button

@@ -25,7 +25,7 @@ function Container() {
   if (spread === "spread") {
     return (
       <div className="">
-        <Iklan />
+        {/* <Iklan /> */}
         <Content data={data} onViewMore={onViewMore} spread={spread} />
       </div>
     );

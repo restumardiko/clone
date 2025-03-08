@@ -9,17 +9,33 @@ import Conconfoot from "./conconfoot";
 // import data from "../utils";
 import { createContext, StrictMode, useState } from "react";
 //import { Container } from "postcss";
-export const BookContext = createContext();
 import { Route, Routes } from "react-router-dom";
 import WishListInside from "../pages/wishlistInside";
 import CartInside from "../pages/cartInside";
 import AccountInside from "../pages/accountInside";
+import SearchSeet from "../pages/searchSeet";
+import { useNavigate } from "react-router-dom";
+export const BookContext = createContext();
 
 function App() {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
   const handleRemove = (id) => {
     console.log("this fucking button remove is clicked");
     setCart(cart.filter((book) => book.id !== id));
+  };
+
+  const handleChange = (e) => {
+    //e.preventDefault();
+    console.log(search);
+
+    setSearch(e.target.value);
+    if (e.target.value != "") {
+      navigate("/search");
+    } else {
+      navigate("/", { replace: true });
+    }
   };
 
   const handelCart = (param) => {
@@ -36,7 +52,9 @@ function App() {
   };
 
   return (
-    <BookContext.Provider value={{ handelCart, handleBuyNow, handleWish }}>
+    <BookContext.Provider
+      value={{ handelCart, handleBuyNow, handleWish, handleChange, search }}
+    >
       <div className="periplusApp">
         <Navbar cart={cart} />
         <Routes>
@@ -47,6 +65,7 @@ function App() {
             element={<CartInside cart={cart} handleRemove={handleRemove} />}
           />
           <Route path="/account" element={<AccountInside />} />
+          <Route path="/search" element={<SearchSeet />} />
         </Routes>
       </div>
     </BookContext.Provider>

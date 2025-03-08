@@ -68,7 +68,7 @@ export default function CartInside({ cart, handleRemove }) {
                     <h1 className="">{book.title}</h1>
                     <h1>{book.author}</h1>
                     <h1>{book.year}</h1>
-                    <h1>Rp.{book.price}</h1>
+                    <h1>Rp.{book["price"].toLocaleString()}</h1>
                   </div>
                   <div id="how-much-item" className="">
                     <button
@@ -103,7 +103,7 @@ export default function CartInside({ cart, handleRemove }) {
             </ul>
 
             <div id="total-amount" className="h-44 bg-gray-200 m-20 mt-3">
-              <h1>Total :{harga}</h1>
+              <h1>Total :Rp.{harga.toLocaleString()}</h1>
               <button onClick={checkout}>CHECK OUT</button>
             </div>
           </>

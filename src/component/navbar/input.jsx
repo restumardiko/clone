@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { BookContext } from "../App";
+
 //import Categories from "./categories";
 
 function Input() {
-  const [search, setSearch] = useState("");
-  const handleChange = (e) => {
-    e.preventDefault();
-
-    setSearch(e.target.value);
-  };
+  const { handleChange } = useContext(BookContext);
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(search);
+    console.log(search === "");
+    // navigate("/search", { replace: true });
+
     // handle(search);
   };
   return (
@@ -21,7 +20,6 @@ function Input() {
         <option value="2">business</option>
         <option value="3">self development</option>
         <option value="4">parenting</option>
-        {/* <option value="3">Toys</option> */}
       </select>
       <div className="input">
         <form onSubmit={handleClick}>
