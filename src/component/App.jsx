@@ -14,6 +14,7 @@ import WishListInside from "../pages/wishlistInside";
 import CartInside from "../pages/cartInside";
 import AccountInside from "../pages/accountInside";
 import SearchSeet from "../pages/searchSeet";
+import MainLayout from "../pages/mainLayout";
 import { useNavigate } from "react-router-dom";
 export const BookContext = createContext();
 
@@ -53,19 +54,29 @@ function App() {
 
   return (
     <BookContext.Provider
-      value={{ handelCart, handleBuyNow, handleWish, handleChange, search }}
+      value={{
+        handelCart,
+        handleBuyNow,
+        handleWish,
+        handleChange,
+        search,
+        cart,
+      }}
     >
       <div className="periplusApp">
-        <Navbar cart={cart} />
         <Routes>
-          <Route path="/" element={<Conconfoot />} />
-          <Route path="/wishlist" element={<WishListInside />} />
-          <Route
-            path="/cart"
-            element={<CartInside cart={cart} handleRemove={handleRemove} />}
-          />
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Conconfoot />} />
+
+            <Route
+              path="/cart"
+              element={<CartInside cart={cart} handleRemove={handleRemove} />}
+            />
+
+            <Route path="/search" element={<SearchSeet />} />
+          </Route>
           <Route path="/account" element={<AccountInside />} />
-          <Route path="/search" element={<SearchSeet />} />
+          <Route path="/wishlist" element={<AccountInside />} />
         </Routes>
       </div>
     </BookContext.Provider>
