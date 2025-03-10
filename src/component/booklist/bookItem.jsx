@@ -8,6 +8,7 @@ function BookItem({ data, hem, spread }) {
   console.log(spread);
   console.log(hem);
   console.log(isSpread);
+  console.log(data);
   //this code for div
   // flex h-auto w-2/3 overflow-hidden justify-center
   //the code below for ul
@@ -39,36 +40,36 @@ function BookItem({ data, hem, spread }) {
               transform: `translateX(-${hem * 100}%)`,
             }}
             className="p-8 transition duration-1000  w-[18%] "
-            key={book[0].id}
+            key={book.id}
           >
             <div
               id="single-book"
               className="group w-60 h-96  text-xl overflow-hidden "
             >
-              <img className=" w-32 h-48" src={book[0].cover} alt="" />
-              <h1>{book[0].title}</h1>
-              <h1>{book[0].author}</h1>
+              <img className=" w-32 h-48" src={book.cover} alt="" />
+              <h1>{book.title}</h1>
+              <h1>{book.author}</h1>
 
-              <h2>Rp.{book[0].price.toString()}</h2>
-              <h2>{book[0].year}</h2>
+              <h2>Rp.{book.price.toString()}</h2>
+              <h2>{book.year}</h2>
               <div className="mt-40 group-hover:mt-2 ease-in duration-300 ">
                 <button
                   onClick={() => {
-                    handleBuyNow(book[0]);
+                    handleBuyNow(book);
                   }}
                 >
                   BuyNow
                 </button>
                 <button
                   onClick={() => {
-                    handelCart(book[0]);
+                    handelCart(book);
                   }}
                 >
                   🛒
                 </button>
                 <button
                   onClick={() => {
-                    handleWish(book[0]);
+                    handleWish(book);
                   }}
                 >
                   ♥

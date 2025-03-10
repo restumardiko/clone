@@ -33,18 +33,29 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   };
   let dat = [];
   if (sheetName === "New Release") {
-    datas.categories.newRelease.forEach((element) => {
-      return dat.push(datas.books.filter((book) => book.id === element));
+    datas.categories.bestSeller.forEach((element) => {
+      const [daat] = datas.books.filter((book) => book.id === element);
+      return dat.push(daat);
     });
+
+    // datas.categories.newRelease.forEach((element) => {
+    //   return dat.push(datas.books.filter((book) => book.id === element));
+    // });
   } else if (sheetName === "Most Wished") {
-    datas.categories.mostWished.forEach((element) => {
-      return dat.push(datas.books.filter((book) => book.id === element));
+    datas.categories.bestSeller.forEach((element) => {
+      const [daat] = datas.books.filter((book) => book.id === element);
+      return dat.push(daat);
+      // datas.categories.mostWished.forEach((element) => {
+      //   return dat.push(datas.books.filter((book) => book.id === element));
     });
   } else if (sheetName === "Best Seller") {
     datas.categories.bestSeller.forEach((element) => {
-      return dat.push(datas.books.filter((book) => book.id === element));
+      const [daat] = datas.books.filter((book) => book.id === element);
+      return dat.push(daat);
     });
   }
+  console.log(dat);
+  console.log(datas);
 
   return (
     <>
