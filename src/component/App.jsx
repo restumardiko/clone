@@ -15,6 +15,7 @@ import CartInside from "../pages/cartInside";
 import AccountInside from "../pages/accountInside";
 import SearchSeet from "../pages/searchSeet";
 import MainLayout from "../pages/mainLayout";
+import BuyNow from "../pages/buynow";
 import { useNavigate } from "react-router-dom";
 export const BookContext = createContext();
 
@@ -46,7 +47,8 @@ function App() {
     });
   };
   const handleBuyNow = (param) => {
-    console.log();
+    console.log(param);
+    navigate("/buynow");
   };
   const handleWish = (param) => {
     console.log(param);
@@ -73,10 +75,11 @@ function App() {
               element={<CartInside cart={cart} handleRemove={handleRemove} />}
             />
 
+            <Route path="/wishlist" element={<WishListInside />} />
             <Route path="/search" element={<SearchSeet />} />
+            <Route path="/buynow" element={<BuyNow />} />
           </Route>
           <Route path="/account" element={<AccountInside />} />
-          <Route path="/wishlist" element={<AccountInside />} />
         </Routes>
       </div>
     </BookContext.Provider>
