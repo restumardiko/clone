@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { BookContext } from "../App";
 
 function BookItem({ data, hem, spread }) {
-  const { handelCart, handleBuyNow, handleWish } = useContext(BookContext);
+  const { handelCart, handleBuyNow, handelWish } = useContext(BookContext);
 
   let isSpread = spread === "View More" ? true : false;
   console.log(spread);
@@ -50,7 +50,7 @@ function BookItem({ data, hem, spread }) {
               <h1>{book.title}</h1>
               <h1>{book.author}</h1>
 
-              <h2>Rp.{book.price.toString()}</h2>
+              <h2>Rp.{book["price"].toLocaleString()}</h2>
               <h2>{book.year}</h2>
               <div className="mt-40 group-hover:mt-2 ease-in duration-300 ">
                 <button
@@ -69,7 +69,7 @@ function BookItem({ data, hem, spread }) {
                 </button>
                 <button
                   onClick={() => {
-                    handleWish(book);
+                    handelWish(book);
                   }}
                 >
                   ♥

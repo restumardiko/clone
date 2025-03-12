@@ -23,6 +23,7 @@ function App() {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
+  const [wish, setWish] = useState([]);
   const handleRemove = (id) => {
     console.log("this fucking button remove is clicked");
     setCart(cart.filter((book) => book.id !== id));
@@ -46,12 +47,15 @@ function App() {
       return isSame ? prevCart : [...prevCart, param];
     });
   };
+  const handelWish = (param) => {
+    setWish((prevWish) => {
+      const isSame = prevWish.some((item) => item.id == param.id);
+      return isSame ? prevWish : [...prevWish, param];
+    });
+  };
   const handleBuyNow = (param) => {
     console.log(param);
     navigate("/buynow");
-  };
-  const handleWish = (param) => {
-    console.log(param);
   };
 
   return (
@@ -59,8 +63,9 @@ function App() {
       value={{
         handelCart,
         handleBuyNow,
-        handleWish,
+        handelWish,
         handleChange,
+        wish,
         search,
         cart,
       }}
