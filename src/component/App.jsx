@@ -24,6 +24,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
   const [wish, setWish] = useState([]);
+  const [buy, setBuy] = useState([]);
   const handleRemove = (id) => {
     console.log("this fucking button remove is clicked");
     setCart(cart.filter((book) => book.id !== id));
@@ -55,7 +56,12 @@ function App() {
   };
   const handleBuyNow = (param) => {
     console.log(param);
+    setBuy(param);
     navigate("/buynow");
+  };
+  const handleDelete = (id) => {
+    console.log("handle delete on ");
+    setWish(wish.filter((book) => book.id !== id));
   };
 
   return (
@@ -65,9 +71,11 @@ function App() {
         handleBuyNow,
         handelWish,
         handleChange,
+        handleDelete,
         wish,
         search,
         cart,
+        buy,
       }}
     >
       <div className="periplusApp">

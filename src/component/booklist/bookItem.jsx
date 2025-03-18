@@ -51,7 +51,7 @@ function BookItem({ data, hem, spread }) {
               <h1>{book.author}</h1>
 
               <h2>Rp.{book["price"].toLocaleString()}</h2>
-              <h2>{book.year}</h2>
+
               <div className="mt-40 group-hover:mt-2 ease-in duration-300 ">
                 <button
                   onClick={() => {

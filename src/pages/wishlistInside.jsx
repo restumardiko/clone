@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import Footer from "../component/footer/footer";
 import { BookContext } from "../component/App";
+import NavSub from "../component/navbar/navigation";
 
 function WishlistBook() {
-  const { wish } = useContext(BookContext);
+  const { wish, handleDelete } = useContext(BookContext);
   console.log(wish);
+  //const[]
 
   return (
     <ul>
@@ -18,9 +20,21 @@ function WishlistBook() {
             <h1>{book.year}</h1>
             <h1>Shared this item ?</h1>
 
-            <button>Edit</button>
+            <button
+              onClick={() => {
+                handleEdite(book.id);
+              }}
+            >
+              Edit
+            </button>
 
-            <button>Delete</button>
+            <button
+              onClick={() => {
+                handleDelete(book.id);
+              }}
+            >
+              Delete
+            </button>
           </li>
         </>
       ))}
@@ -32,6 +46,7 @@ function WishListInside() {
   console.log("hehheheheh");
   return (
     <>
+      <NavSub title={"Wish List"} />
       <div id="background" className="bg-white  h-auto block">
         <div
           id="title-container"

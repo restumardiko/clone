@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 function onWish(e) {
   // e.preventDefault();
+
   console.log("wishlist clicked");
 }
 
