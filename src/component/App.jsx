@@ -17,6 +17,7 @@ import SearchSeet from "../pages/searchSeet";
 import MainLayout from "../pages/mainLayout";
 import BuyNow from "../pages/buynow";
 import { useNavigate } from "react-router-dom";
+import SingleBookInside from "../pages/singleBook";
 export const BookContext = createContext();
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
             <Route path="/wishlist" element={<WishListInside />} />
             <Route path="/search" element={<SearchSeet />} />
             <Route path="/buynow" element={<BuyNow />} />
+            <Route path="/book_detail" element={<SingleBookInside />} />
           </Route>
           <Route path="/account" element={<AccountInside />} />
         </Routes>

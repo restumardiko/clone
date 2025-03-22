@@ -1,23 +1,20 @@
 import { useContext } from "react";
 import { BookContext } from "../App";
+import { useNavigate } from "react-router-dom";
 
 function BookItem({ data, hem, spread }) {
   const { handelCart, handleBuyNow, handelWish } = useContext(BookContext);
+  const navigate = useNavigate();
+  function handelSingleBook(param) {
+    console.log(param);
+    navigate("/book_detail", { state: param });
+  }
 
   let isSpread = spread === "View More" ? true : false;
   console.log(spread);
   console.log(hem);
   console.log(isSpread);
   console.log(data);
-  //this code for div
-  // flex h-auto w-2/3 overflow-hidden justify-center
-  //the code below for ul
-  // flex flex-row  flex-grow justify-center h-auto
-
-  //this code for div viewmore
-  //flex h-auto w-2/3  justify-center
-  //this code for ul
-  //gap-2 flex-row flex flex-wrap justify-center h-auto
 
   return (
     <div
@@ -46,7 +43,14 @@ function BookItem({ data, hem, spread }) {
               id="single-book"
               className="group w-60 h-96  text-xl overflow-hidden "
             >
-              <img className=" w-32 h-48" src={book.cover} alt="" />
+              <img
+                onClick={() => {
+                  handelSingleBook(book);
+                }}
+                className=" w-32 h-48"
+                src={book.cover}
+                alt=""
+              />
               <h1>{book.title}</h1>
               <h1>{book.author}</h1>
 
