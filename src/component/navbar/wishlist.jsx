@@ -8,8 +8,8 @@ function onWish(e) {
 
 function Wishlist() {
   return (
-    <Link to="/wishlist">
-      <button onClick={onWish} className=" text-7xl text-zinc-50 p-6">
+    <Link className="my-auto" to="/wishlist">
+      <button onClick={onWish} className=" text-6xl text-white   px-3">
         ♥
       </button>
     </Link>

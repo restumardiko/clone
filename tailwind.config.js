@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
+    extend: {theme: {
+      extend: {
+        fontSize: {
+          base: "16px",
+          lg: "18px",
+          xl: "20px",
+        },
+      },
+    },
+    
       spacing: {
         // Small Spacing (multiples of 4px)
         '1': '0.25rem',  // 4px

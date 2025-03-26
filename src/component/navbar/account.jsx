@@ -6,8 +6,8 @@ function onAccount(e) {
 
 function Account() {
   return (
-    <Link to="/account">
-      <button onClick={onAccount} className="p-6 text-5xl hover:">
+    <Link className="my-auto" to="/account">
+      <button onClick={onAccount} className="px-2  text-5xl  hover:">
         🙂
       </button>
     </Link>

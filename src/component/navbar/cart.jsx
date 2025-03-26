@@ -1,18 +1,21 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { BookContext } from "../App";
 
-function Cart({ cart }) {
+function Cart() {
+  const { cart } = useContext(BookContext);
   console.log(cart);
   return (
-    <div className="group">
-      <h1>{cart.length}</h1>
-      <Link to="/cart">
-        <button className="text-5xl p-6">🛒</button>
+    <div className="group  ">
+      <Link className=" " to="/cart">
+        <h1 className="relative top-3 left-8 text-white  ">{cart.length}</h1>
+        <button className="text-5xl  px-2 block">🛒</button>
       </Link>
       <div
         id="drop-down"
-        className="absolute bg-red-500 w-80 top-24 mt-20 group-hover:block hidden z-10"
+        className="absolute bg-red-500 w-80 top-24 mt-20 group-hover:block hidden z-10 text-white"
       >
-        <div id="drop-down-header" className="block">
+        <div id="drop-down-header" className="block ">
           <h1 className="inline-block">{cart.length} Items</h1>
           <h1 className="inline-block">shoping Cart</h1>
         </div>
