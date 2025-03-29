@@ -16,7 +16,7 @@ function Wishlist() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="white"
-          className="size-11"
+          className="size-12 pt-1"
         >
           <path
             strokeLinecap="round"

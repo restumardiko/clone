@@ -2,8 +2,11 @@ import SheetHov from "./sheetHov";
 
 function BargainBooks() {
   return (
-    <div id="Bargain" className="mx-4 group hover:bg-red-500">
-      <button>
+    <div
+      id="Bargain"
+      className="px-4 hover:text-white h-full  text-center group hover:bg-red-700 z-20"
+    >
+      <button className="h-full">
         <h2>Bargain Books</h2>
       </button>
       <SheetHov
