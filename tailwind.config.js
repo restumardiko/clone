@@ -11,6 +11,7 @@ export default {
           base: "16px",
           lg: "18px",
           xl: "20px",
+
         },
       },
     },
