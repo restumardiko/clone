@@ -4,7 +4,7 @@ function BargainBooks() {
   return (
     <div
       id="Bargain"
-      className="px-4 hover:text-white h-full  text-center group hover:bg-red-700 z-20"
+      className="px-5 hover:text-white h-full  text-center group hover:bg-red-700 z-20"
     >
       <button className="h-full">
         <h2>Bargain Books</h2>

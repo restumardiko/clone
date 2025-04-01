@@ -2,20 +2,27 @@ import { Link } from "react-router-dom";
 
 export default function AccountInside() {
   return (
-    <div id="container" className="m-auto max-w-96">
+    <div id="container" className="m-auto w h-full">
       <Link to="/">
         <div id="titel">
           {/* <h1>PERIPLUS</h1>
           <h2>ONLINE</h2> */}
-          <img className="w-80 m-auto" src="src/logo-periplus.jpg" alt="" />
+          <img
+            className="w-80 m-auto my-5"
+            src="src/logo-periplus.jpg"
+            alt=""
+          />
         </div>
       </Link>
 
       <div
         id="login-border"
-        className="w-auto h-auto border-black border-solid-1"
+        className="w-1/4 mx-auto border-2 border-gray-400 p-4  h-auto"
       >
-        <div id="signin_header" className="text-center">
+        <div
+          id="signin_header"
+          className="text-center font-semibold  text-5xl text-orange-600 font-sans "
+        >
           <h1>Sign In to Your Account</h1>
         </div>
         <div id="table_form" className="w-full">
