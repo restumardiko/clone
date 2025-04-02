@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function AccountInside() {
   return (
-    <div id="container" className="m-auto w h-full">
+    <div id="container" className="m-auto bg-white h-full">
       <Link to="/">
         <div id="titel">
           {/* <h1>PERIPLUS</h1>
@@ -17,19 +17,19 @@ export default function AccountInside() {
 
       <div
         id="login-border"
-        className="w-[30%] mx-auto my-4 border-2 border-gray-400 p-4  h-auto"
+        className="w-[30%] mx-auto my-4 border-2 border-gray-300 p-7  h-auto"
       >
         <div
           id="signin_header"
-          className="text-left font-semibold  text-5xl text-orange-600 font-sans my-3 "
+          className="text-left font-semibold   text-5xl text-orange-600 font-sans mb-8 "
         >
           <h1>Sign In to Your Account</h1>
         </div>
         <div
           id="table_form"
-          className="w-full text-3xl text-gray-800  rounded-md"
+          className="w-full text-3xl text-gray-800  rounded-lg"
         >
-          <table className="w-full ">
+          <table className="w-full my-2  ">
             <tr>
               <td>
                 <b>Email:</b>
@@ -40,8 +40,8 @@ export default function AccountInside() {
                 <input
                   type="text"
                   maxLength={20}
-                  placeholder="enter your email"
-                  className="border-solid border rounded-md h-12 w-full my-3"
+                  placeholder=""
+                  className="border-solid border rounded-md h-12 w-full my-3 text-2xl "
                 />
               </td>
             </tr>
@@ -56,14 +56,14 @@ export default function AccountInside() {
                   type="password"
                   name="password"
                   id=""
-                  className="border-solid border rounded-md h-12 w-full my-3"
+                  className="border-solid border rounded-md h-12 w-full my-3 text-2xl "
                 />
               </td>
             </tr>
             <tr>
               <td>
                 <input
-                  className="bg-blue-500 w-full text-center text-white my-3 border-solid border rounded-md"
+                  className="bg-blue-600 w-full text-balance text-2xl h-10  text-white my-3 border-solid border-2 border-black rounded-md"
                   type="submit"
                   value="Login"
                 />

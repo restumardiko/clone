@@ -26,24 +26,41 @@ function Cart() {
       </Link>
       <div
         id="drop-down"
-        className="absolute bg-red-700 w-80 top-24 mt-20 group-hover:block hidden z-10 text-white"
+        className="absolute bg-red-700 w-[23%] -ml-64 p-5 top-16 mt-28 group-hover:block min-h-40 shadow-lg hidden z-10 text-white"
       >
-        <div id="drop-down-header" className="block ">
-          <h1 className="inline-block">{cart.length} Items</h1>
-          <h1 className="inline-block">shoping Cart</h1>
+        <div id="drop-down-header " className=" ">
+          <b className="flex flex-row justify-between my-6">
+            <span className=" mx-3 text-left">{cart.length} ITEMS(S)</span>
+            <span className="text-right mx-3">SHOPING CART</span>
+          </b>
+          <div className="w-full h-[0.1rem] my-4  bg-white"></div>
         </div>
 
-        {/* <h1>
-          {cart.length > 0 ? `You have ${cart.length} items` : "Cart is empty"}
-        </h1> */}
         <ul>
           {cart.map((x) => (
-            <li>
-              <h1>{x.title}</h1>
+            <li key={x.id} className="text-2xl ">
+              <span className="flex justify-between flex-row">
+                <div>
+                  <span className="block">{x.title}</span>
+                  <span>1=Rp.{x["price"].toLocaleString()}</span>
+                </div>
+
+                <img className="w-28" src={x.cover} alt="" />
+              </span>
+              <div className="w-full h-[0.1rem] my-4  bg-white"></div>
             </li>
           ))}
         </ul>
-        <button>proceed to checkOut</button>
+        <span>
+          {cart.length != 0 ? (
+            <div>
+              <span>total:</span>
+              <button>Proceed to Checkout</button>
+            </div>
+          ) : (
+            "Your shopping cart is empty"
+          )}
+        </span>
       </div>
     </div>
   );

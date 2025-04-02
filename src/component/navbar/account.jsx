@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Account() {
   return (
-    <Link className="my-auto" to="/account">
+    <Link className="my-auto " to="/account">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

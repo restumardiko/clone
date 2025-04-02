@@ -59,9 +59,10 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex   flex-col m-16 bg-white h-auto items-center ">
-        <div className="flex justify-center h-20 ">
-          <h1 className="  text-6xl">{sheetName}</h1>
+      <div className="flex shadow-lg flex-col m-16 mx-40 bg-white h-auto items-center p-8">
+        <div className=" justify-center h-20 ">
+          <b className=" text-gray-700 text-5xl">{sheetName}</b>
+          <div className="w-28 mx-auto my-6 h-1 bg-red-700"></div>
         </div>
 
         <BookItem
@@ -71,12 +72,12 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           spread={spread}
         />
 
-        <div className="flex justify-center flex-row w-[100%]">
+        <div className="flex justify-center flex-row w-[100%] ">
           <button
             onClick={handlePrev}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full relative -top-60 left-[-40%] -translate-y-1/2 text-5xl pb-2 bg-white "
+                ? "inline w-20 h-20 rounded-full shadow-xl relative -top-60 left-[-47%] -translate-y-1/2 text-5xl pb-2 bg-white "
                 : "hidden"
             }
           >
@@ -86,7 +87,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             onClick={handleNext}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full relative -top-60 left-[40%] text-5xl -translate-y-1/2 pb-2 bg-white"
+                ? "inline w-20 h-20 rounded-full relative -top-60 left-[47%] text-5xl -translate-y-1/2 pb-2 bg-white"
                 : "hidden"
             }
           >
