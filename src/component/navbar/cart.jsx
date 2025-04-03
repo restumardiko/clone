@@ -4,7 +4,9 @@ import { BookContext } from "../App";
 
 function Cart() {
   const { cart } = useContext(BookContext);
+  let harga = 0;
   console.log(cart);
+  cart.map((each) => (harga += each.price));
   return (
     <div className="group  ">
       <Link className=" " to="/cart">
@@ -37,26 +39,54 @@ function Cart() {
         </div>
 
         <ul>
-          {cart.map((x) => (
-            <li key={x.id} className="text-2xl ">
-              <span className="flex justify-between flex-row">
-                <div>
-                  <span className="block">{x.title}</span>
-                  <span>1=Rp.{x["price"].toLocaleString()}</span>
-                </div>
+          {cart.length <= 3 ? (
+            <div>
+              {cart.map((x) => (
+                <li key={x.id} className="text-2xl ">
+                  <span className="flex justify-between flex-row">
+                    <div>
+                      <span className="block">{x.title}</span>
+                      <span>1=Rp.{x["price"].toLocaleString()}</span>
+                    </div>
 
-                <img className="w-28" src={x.cover} alt="" />
-              </span>
-              <div className="w-full h-[0.1rem] my-4  bg-white"></div>
-            </li>
-          ))}
+                    <img className="w-28" src={x.cover} alt="" />
+                  </span>
+                  <div className="w-full h-[0.1rem] my-4  bg-white"></div>
+                </li>
+              ))}
+            </div>
+          ) : (
+            <>
+              <div>
+                {cart.slice(0, 3).map((x) => (
+                  <li key={x.id} className="text-2xl ">
+                    <span className="flex justify-between flex-row">
+                      <div>
+                        <span className="block">{x.title}</span>
+                        <span>1=Rp.{x["price"].toLocaleString()}</span>
+                      </div>
+
+                      <img className="w-28" src={x.cover} alt="" />
+                    </span>
+                    <div className="w-full h-[0.1rem] my-4  bg-white"></div>
+                  </li>
+                ))}
+              </div>
+              <button>View More{">>"}</button>
+            </>
+          )}
         </ul>
         <span>
           {cart.length != 0 ? (
-            <div>
-              <span>total:</span>
-              <button>Proceed to Checkout</button>
-            </div>
+            <>
+              <b className="flex flex-row justify-between text-2xl text-black">
+                <span>Total:</span>
+                <span>Rp. {harga.toLocaleString()}</span>
+              </b>
+              <button className="w-60 h-20 bg-black mx-auto">
+                Proceed to Checkout
+              </button>
+            </>
           ) : (
             "Your shopping cart is empty"
           )}
