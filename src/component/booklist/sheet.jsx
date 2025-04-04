@@ -16,7 +16,6 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   }, [datas.books]);
   const handlePrev = () => {
     //e.preventDefault();
-    console.log("iclik mas sng kiwa");
 
     setCurrentIndex((prev) => {
       if (prev === 0) {
@@ -28,7 +27,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   };
   const handleNext = () => {
     // e.preventDefault();
-    console.log("iclik mas tengen");
+
     setCurrentIndex((prev) => (prev === datas.books.length - 1 ? 0 : prev + 1));
   };
   let dat = [];
@@ -59,10 +58,10 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex shadow-lg flex-col m-16 mx-40 bg-white h-auto items-center p-8">
+      <div className="flex shadow-md flex-col m-16 mx-40 bg-white h-auto items-center px-8 pt-8 pb-4">
         <div className=" justify-center h-20 ">
           <b className=" text-gray-700 text-5xl">{sheetName}</b>
-          <div className="w-28 mx-auto my-6 h-1 bg-red-700"></div>
+          <div className="w-24 mx-auto my-6 h-1 bg-red-700"></div>
         </div>
 
         <BookItem
@@ -72,33 +71,59 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           spread={spread}
         />
 
-        <div className="flex justify-center flex-row w-[100%] ">
+        <div className="flex justify-center h-0 flex-row w-[100%] ">
           <button
             onClick={handlePrev}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full shadow-xl relative -top-60 left-[-47%] -translate-y-1/2 text-5xl pb-2 bg-white "
+                ? "inline w-20 h-20 rounded-full shadow-md border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl pb-2 bg-white "
                 : "hidden"
             }
           >
-            {"<"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-11 mx-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
           </button>
           <button
             onClick={handleNext}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full relative -top-60 left-[47%] text-5xl -translate-y-1/2 pb-2 bg-white"
+                ? "inline w-20 h-20 rounded-full relative shadow-md border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2 pb-2 bg-white"
                 : "hidden"
             }
           >
-            {">"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-11 m-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
           </button>
         </div>
         <div className="flex justify-center">
           <button
             id={sheetName}
             onClick={onViewMore}
-            className="w-36 h-12 m-4 rounded-full bg-red-600 text-white "
+            className="w-36 h-12 m-4 rounded-full bg-red-600 text-white font-bold text-xl "
           >
             {spread}
           </button>

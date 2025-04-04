@@ -71,8 +71,29 @@ function Cart() {
                     <div className="w-full h-[0.1rem] my-4  bg-white"></div>
                   </li>
                 ))}
-              </div>
-              <button>View More{">>"}</button>
+              </div>{" "}
+              <Link className=" " to="/cart">
+                <button className="inline text-xl">
+                  View more
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="size-5 inline"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                      clipRule="evenodd"
+                    />
+                    <path
+                      fillRule="evenodd"
+                      d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </>
           )}
         </ul>
@@ -83,8 +104,8 @@ function Cart() {
                 <span>Total:</span>
                 <span>Rp. {harga.toLocaleString()}</span>
               </b>
-              <button className="w-60 h-20 bg-black mx-auto">
-                Proceed to Checkout
+              <button className="block w-[90%] h-20 bg-black mx-auto mt-10">
+                <b>PROCEED TO CHECKOUT</b>
               </button>
             </>
           ) : (
