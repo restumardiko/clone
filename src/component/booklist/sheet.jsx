@@ -58,7 +58,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex shadow-md flex-col m-16 mx-40 bg-white h-auto items-center px-8 pt-8 pb-4">
+      <div className="flex shadow-md flex-col  m-16 mx-40 bg-white h-auto items-center px-8 pt-8 pb-4">
         <div className=" justify-center h-20 ">
           <b className=" text-gray-700 text-5xl">{sheetName}</b>
           <div className="w-24 mx-auto my-6 h-1 bg-red-700"></div>
@@ -76,7 +76,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             onClick={handlePrev}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full shadow-md border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl pb-2 bg-white "
+                ? "inline w-20 h-20 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl  bg-white "
                 : "hidden"
             }
           >
@@ -99,7 +99,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             onClick={handleNext}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full relative shadow-md border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2 pb-2 bg-white"
+                ? "inline w-20 h-20 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2  bg-white"
                 : "hidden"
             }
           >

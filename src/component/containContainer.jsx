@@ -24,7 +24,7 @@ function Container() {
   };
   if (spread === "spread") {
     return (
-      <div className="">
+      <div className="pt-40">
         {/* <Iklan /> */}
         <Content data={data} onViewMore={onViewMore} spread={spread} />
       </div>
@@ -35,7 +35,7 @@ function Container() {
     spread === "Best Seller"
   ) {
     return (
-      <div className="">
+      <div className="pt-40">
         <Content data={data} onViewMore={onViewMore} spread={spread} />
       </div>
     );

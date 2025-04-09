@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-      <div id="nav-container" className="relative z-50 ">
+      <div id="nav-container" className="fixed z-50 w-full top-0  ">
         <div className=" bg-red-700 ">
           <div className="flex 	flex-direction: row h-24 justify-center space-x-64 text-xl  ">
             <Link className="my-auto" to="/">

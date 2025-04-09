@@ -20,7 +20,7 @@ function BookItem({ data, hem, spread }) {
     <div
       className={
         isSpread
-          ? "flex h-auto w-2/3  justify-center"
+          ? "flex h-auto w-[98%]  justify-center"
           : "flex h-[30rem] w-[98%] overflow-hidden justify-center"
       }
     >
@@ -33,10 +33,8 @@ function BookItem({ data, hem, spread }) {
       >
         {data.map((book) => (
           <li
-            style={{
-              transform: `translateX(-${hem * 100}%)`,
-            }}
-            className="px-8 pt-8 transition duration-2000  w-[18%] "
+            style={!isSpread ? { transform: `translateX(-${hem * 100}%)` } : {}}
+            className="px-8 pt-8 transition duration-2000  w-[18%] h-[29rem]  "
             key={book.id}
           >
             <div
@@ -63,7 +61,7 @@ function BookItem({ data, hem, spread }) {
 
               <div className="mt-36 group-hover:mt-2 ease-in duration-300 text-red-600 text-2xl font-bold ">
                 <button
-                  className="border-r border-solid px-4"
+                  className="border-r-2 border-solid  px-4"
                   onClick={() => {
                     handleBuyNow(book);
                   }}

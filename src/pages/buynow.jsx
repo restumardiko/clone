@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 
 import NavSub from "../component/navbar/navigation";
 import { BookContext } from "../component/App";
+import Footer from "../component/footer/footer";
 
 export default function BuyNow() {
   const { buy } = useContext(BookContext);
@@ -20,7 +21,7 @@ export default function BuyNow() {
   return (
     <>
       <NavSub title={"Buy Now"} />
-      <div id="book_detail">
+      <div id="book_detail" className="mt-40">
         <div id="bg">
           <div id="container_book" className="m-20">
             <img src={buy.cover} alt="" />
@@ -58,6 +59,7 @@ export default function BuyNow() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

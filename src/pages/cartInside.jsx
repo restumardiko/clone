@@ -1,6 +1,7 @@
 import Footer from "../component/footer/footer";
 import { useState } from "react";
 import NavSub from "../component/navbar/navigation";
+import { Link } from "react-router-dom";
 
 export default function CartInside({ cart, handleRemove }) {
   console.log("sikamanis", cart);
@@ -45,9 +46,17 @@ export default function CartInside({ cart, handleRemove }) {
   return (
     <>
       <NavSub title={"Shoping Cart"} />
-      <div id="cartProduct" className="bg-gray-100 m-20 mb-2">
+      <div id="cartProduct" className="p-20 m-20 mb-2 mt-40">
         {cart.length === 0 ? (
-          <h1>kosong</h1>
+          <div className="text-gray-600">
+            <h1 className="text-7xl font-extrabold ">Shopping Cart</h1>
+            <h2 className="text-2xl font-semibold my-2">
+              Your Shopping Cart is Empty
+            </h2>
+            <Link to="/">
+              <button className="text-2xl font-semibold my-2">Continue</button>
+            </Link>
+          </div>
         ) : (
           <>
             <ul>
