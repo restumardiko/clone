@@ -45,7 +45,7 @@ function WishlistBook() {
 function WishListInside() {
   console.log("hehheheheh");
   return (
-    <>
+    <div className="pt-[9.5rem]">
       <NavSub title={"Wish List"} />
       <div id="background" className="bg-white  h-auto block">
         <div
@@ -69,7 +69,7 @@ function WishListInside() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 export default WishListInside;

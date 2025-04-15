@@ -9,7 +9,7 @@ export default function SingleBookInside() {
   const book = location.state;
   return (
     <div id="background">
-      <div id="book_container">
+      <div id="book_container" className="pt-40">
         <img src={book.cover} alt="" />
         <h1>{book.title}</h1>
         <h1>{book.author}</h1>

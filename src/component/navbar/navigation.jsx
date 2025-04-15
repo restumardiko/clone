@@ -26,12 +26,32 @@ export default function NavSub({ title }) {
   }
 
   return (
-    <div id="cartPageNav" className="h-8 bg-slate-50">
-      <Link to="/">
-        <button>Home</button>
-      </Link>
-      <h1 className="inline">{"->"}</h1>
-      {pageLink}
+    <div
+      id="cartPageNav"
+      className=" pl-[8%] text-2xl h-11 text-gray-600   bg-slate-50"
+    >
+      <div className=" w-80">
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="size-6 inline mx-4"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+
+        {pageLink}
+      </div>
     </div>
   );
 }
