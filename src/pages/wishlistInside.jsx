@@ -5,7 +5,7 @@ import NavSub from "../component/navbar/navigation";
 
 function WishlistBook() {
   const { wish, handleDelete } = useContext(BookContext);
-  console.log(wish);
+  console.log(wish.length);
   //const[]
 
   return (
@@ -16,7 +16,11 @@ function WishlistBook() {
             key={book.id}
             className="h-auto m-7  flex flex-row border-b-2 border-gray-300"
           >
-            <img className="  h-56 inline mx-6" src={book.cover} alt="" />
+            <img
+              className="  h-56 inline mx-6 shadow-xl"
+              src={book.cover}
+              alt=""
+            />
             <div className="inline-block w-full p-6">
               <h1 className="text-2xl font-semibold my-2">{book.title}</h1>
               <h2 className="text-xl font-semibold italic text-gray-500 my-1">
@@ -58,6 +62,7 @@ function WishlistBook() {
 }
 
 function WishListInside() {
+  const { wish } = useContext(BookContext);
   console.log("hehheheheh");
   return (
     <div className="pt-[9.5rem]">
@@ -87,7 +92,7 @@ function WishListInside() {
           id="item-container"
           className="w-full bg-white shadow-md my-5 h-auto inline-block rounded"
         >
-          <WishlistBook />
+          {wish.length == 0 ? <></> : <WishlistBook />}
         </div>
       </div>
       <Footer />

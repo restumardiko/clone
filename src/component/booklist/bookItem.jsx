@@ -41,14 +41,17 @@ function BookItem({ data, hem, spread }) {
               id="single-book"
               className="group w-60 h-full  text-xl overflow-hidden "
             >
-              <img
-                onClick={() => {
-                  handelSingleBook(book);
-                }}
-                className=" w-44 mx-auto"
-                src={book.cover}
-                alt=""
-              />
+              <button>
+                <img
+                  onClick={() => {
+                    handelSingleBook(book);
+                  }}
+                  className=" w-44 mx-auto"
+                  src={book.cover}
+                  alt=""
+                />
+              </button>
+
               <div className="mx-3">
                 <h4 className="text-gray-600 font-bold ">{book.title}</h4>
                 <h4 className="text-blue-600 font-semibold">{book.author}</h4>
