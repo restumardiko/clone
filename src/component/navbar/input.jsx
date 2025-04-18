@@ -25,7 +25,12 @@ function Input() {
         <option value="4">parenting</option>
       </select>
       <form onSubmit={handleClick} className="flex w-full">
-        <input className="h-14 w-96 px-4" type="text" onChange={handleChange} />
+        <input
+          className="h-14 w-96 px-4"
+          type="text"
+          required
+          onChange={handleChange}
+        />
         <button type="submit" className="p-2 hover:bg-orange-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"

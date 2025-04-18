@@ -27,8 +27,8 @@ function BookItem({ data, hem, spread }) {
       <ul
         className={
           isSpread
-            ? "gap-2 flex-row flex flex-wrap justify-center h-auto"
-            : "flex flex-row  justify-center h-auto"
+            ? "gap-2 flex-row flex flex-wrap justify-center w-full h-auto"
+            : " flex flex-row  justify-center w-full h-auto"
         }
       >
         {data.map((book) => (
