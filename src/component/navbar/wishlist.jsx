@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { BookContext } from "../App";
 
 function onWish(e) {
   // e.preventDefault();
@@ -7,16 +9,18 @@ function onWish(e) {
 }
 
 function Wishlist() {
+  const { wish } = useContext(BookContext);
   return (
     <Link className="my-auto" to="/wishlist">
-      <button onClick={onWish} className=" px-3">
+      <h1 className="static h-auto text-white text-end mx-2 ">{wish.length}</h1>
+      <button onClick={onWish} className=" px-3 relative -top-[0.80rem] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="white"
-          className="size-12 pt-1"
+          className="size-12 "
         >
           <path
             strokeLinecap="round"
