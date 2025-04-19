@@ -28,7 +28,9 @@ export default function SearchSeet() {
             spread={"View Less"}
           />
         ) : (
-          <div>No Result</div>
+          <div className="text-3xl font-bold text-gray-500">
+            The book you're looking for is not available
+          </div>
         )}
       </div>
       <Footer />

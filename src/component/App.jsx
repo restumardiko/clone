@@ -79,7 +79,7 @@ function App() {
         buy,
       }}
     >
-      <div className="periplusApp bg-orange-200">
+      <div className="periplusApp bg-orange-100">
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Conconfoot />} />
