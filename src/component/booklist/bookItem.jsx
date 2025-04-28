@@ -1,20 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { BookContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import { FunctionSquare } from "lucide-react";
 
-function BookItem({ data, hem, spread }) {
+function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
   const { handelCart, handleBuyNow, handelWish } = useContext(BookContext);
+
   const navigate = useNavigate();
   function handelSingleBook(param) {
-    console.log(param);
+    // console.log(param);
     navigate("/book_detail", { state: param });
   }
 
   let isSpread = spread === "View More" ? false : true;
-  console.log(spread);
+
   console.log(hem);
-  console.log(isSpread);
-  console.log(data);
 
   return (
     <div
@@ -28,20 +28,26 @@ function BookItem({ data, hem, spread }) {
         className={
           isSpread
             ? "gap-2 flex-row flex flex-wrap justify-center w-full h-auto"
-            : " flex flex-row  justify-center w-full h-auto"
+            : " flex flex-row  w-full h-auto"
         }
       >
         {data.map((book) => (
           <li
-            style={!isSpread ? { transform: `translateX(-${hem * 100}%)` } : {}}
-            className="px-8 pt-8 transition duration-2000  w-[18%] h-[29rem]  "
+            style={!isSpread ? { transform: `translateX(${-hem * 100}%)` } : {}}
+            className={
+              hem === -6 || hem === 12
+                ? "px-8 pt-8 transition duration-0  w-[18%] h-[29rem]  "
+                : "px-8 pt-8 transition duration-2000  w-[18%] h-[29rem]"
+            }
+            onMouseEnter={() => fStopRunning()}
+            onMouseLeave={() => fStartRunning()}
             key={book.id}
           >
             <div
               id="single-book"
-              className="group w-60 h-full  text-xl overflow-hidden "
+              className="group w-60 h-full mx-auto text-xl overflow-hidden "
             >
-              <button>
+              <button className="block mx-auto">
                 <img
                   onClick={() => {
                     handelSingleBook(book);
@@ -53,7 +59,9 @@ function BookItem({ data, hem, spread }) {
               </button>
 
               <div className="mx-3">
-                <h4 className="text-gray-600 font-bold ">{book.title}</h4>
+                <h4 className="text-gray-600 font-bold overflow-hidden h-7">
+                  {book.title}
+                </h4>
                 <h4 className="text-blue-600 font-semibold">{book.author}</h4>
                 <h4 className="text-gray-500"> Paperback</h4>
 

@@ -13,6 +13,12 @@ export default function SearchSeet() {
   const datas = data.books.filter((data) => {
     return data.title.toLowerCase().includes(search.toLowerCase());
   });
+  const fStartRunning = () => {
+    return;
+  };
+  const fStopRunning = () => {
+    return;
+  };
 
   return (
     <div className="pt-56">
@@ -26,6 +32,8 @@ export default function SearchSeet() {
             hem={0}
             handleBuyNow={handleBuyNow}
             spread={"View Less"}
+            fStartRunning={fStartRunning}
+            fStopRunning={fStopRunning}
           />
         ) : (
           <div className="text-3xl font-bold text-gray-500">

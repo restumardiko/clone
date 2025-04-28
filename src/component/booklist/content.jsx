@@ -1,7 +1,26 @@
 import Sheet from "./sheet";
+import { useState } from "react";
 
-export default function Content({ data, onViewMore, spread }) {
+export default function Content({ data }) {
+  const [spread, setSpread] = useState("spread");
   console.log(spread);
+
+  const onViewMore = (e) => {
+    console.log(e.target);
+    if (spread === "spread") {
+      const etok = e.target.id;
+      setSpread(() => {
+        return etok;
+      });
+    } else if (spread !== "spread") {
+      setSpread(() => {
+        return "spread";
+      });
+    }
+
+    // console.log(typeof e.target.id);
+  };
+
   if (spread === "spread") {
     return (
       <>

@@ -1,25 +1,59 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BookItem from "./bookItem";
 
 function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
-  console.log(spread);
-  let isSpread = spread === "View More" ? true : false;
+  // console.log(datas.books);
+  // console.log(spread);
+  let isSpread = spread === "View More" ? false : true;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const [isRunning, setIsRunning] = useState(true);
+  const interv = useRef(null);
+  function fStopRunning() {
+    // console.log(interv.current);
+    // console.log("starting stop");
+    clearInterval(interv.current);
+    interv.current = null;
+    // setIsRunning(false);
+  }
+
+  const fStartRunning = () => {
+    console.log(interv.current);
+    if (isSpread) {
+      return;
+    } else {
+      console.log("starting scroll");
+      if (interv.current === null) {
+        interv.current = setInterval(() => {
+          setCurrentIndex((prev) =>
+            prev === datas.books.length ? -6 : prev + 1
+          );
+        }, 2000);
+        //setIsRunning(true);
+      }
+    }
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === datas.books.length - 1 ? 0 : prev + 1
-      );
-    }, 100000);
-    return () => clearInterval(interval); // Clear interval when component unmounts
+    interv.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev === datas.books.length ? -6 : prev + 1));
+    }, 2000);
+    //setIsRunning(true);
+    return () => clearInterval(interv.current); // Clear interval when component unmounts
   }, [datas.books]);
+
+  const fSpread = (e) => {
+    fStopRunning();
+    // console.log("mas");
+    onViewMore(e);
+  };
+
   const handlePrev = () => {
     //e.preventDefault();
 
     setCurrentIndex((prev) => {
-      if (prev === 0) {
-        return datas.books.length - 1;
+      if (prev === -6) {
+        return datas.books.length;
       } else {
         return prev - 1;
       }
@@ -28,7 +62,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   const handleNext = () => {
     // e.preventDefault();
 
-    setCurrentIndex((prev) => (prev === datas.books.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === datas.books.length ? -6 : prev + 1));
   };
   let dat = [];
   if (sheetName === "New Release") {
@@ -53,8 +87,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
       return dat.push(daat);
     });
   }
-  console.log(dat);
-  console.log(datas);
+  // console.log(dat);
+  // console.log(datas);
 
   return (
     <>
@@ -69,15 +103,19 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           hem={currentIndex}
           handleBuyNow={handleBuyNow}
           spread={spread}
+          fStopRunning={fStopRunning}
+          fStartRunning={fStartRunning}
         />
 
         <div className="flex justify-center h-0 flex-row w-[100%] ">
           <button
             onClick={handlePrev}
+            onMouseEnter={() => fStopRunning()}
+            onMouseLeave={() => fStartRunning()}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl  bg-white "
-                : "hidden"
+                ? "hidden"
+                : "inline w-20 h-20 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl  bg-white "
             }
           >
             <svg
@@ -97,10 +135,12 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           </button>
           <button
             onClick={handleNext}
+            onMouseEnter={() => fStopRunning()}
+            onMouseLeave={() => fStartRunning()}
             className={
               isSpread
-                ? "inline w-20 h-20 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2  bg-white"
-                : "hidden"
+                ? "hidden"
+                : "inline w-20 h-20 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2  bg-white"
             }
           >
             <svg
@@ -122,7 +162,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
         <div className="flex justify-center">
           <button
             id={sheetName}
-            onClick={onViewMore}
+            onClick={(e) => fSpread(e)}
             className="w-36 h-12 m-4 rounded-full bg-red-600 text-white font-bold text-xl "
           >
             {spread}
