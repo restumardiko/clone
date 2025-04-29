@@ -6,7 +6,7 @@ import PreOrder from "./preOrder";
 
 function Subnav() {
   return (
-    <div id="subnav" className="bg-gray-200 ">
+    <div id="subnav" className="lg:bg-gray-200 hidden lg:block ">
       <div className="flex items-center flex-row bg-gray-200 h-14 text-2xl font-semibold w-3/4 mx-auto ">
         <Categories />
         <NewRealease />

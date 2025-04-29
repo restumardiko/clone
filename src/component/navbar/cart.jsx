@@ -17,7 +17,7 @@ function Cart() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="white"
-          className="size-11 mb-8"
+          className="md:size-11 md:mb-8 size-7 mb-3"
         >
           <path
             strokeLinecap="round"
@@ -28,7 +28,7 @@ function Cart() {
       </Link>
       <div
         id="drop-down"
-        className="absolute bg-red-700 w-[23%] -ml-64 p-5 top-16 mt-28 group-hover:block min-h-40 shadow-lg hidden z-10 text-white"
+        className=" absolute bg-red-700 w-[23%] -ml-64 p-5 top-16 mt-28 md:group-hover:block min-h-40 shadow-lg hidden z-10 text-white"
       >
         <div id="drop-down-header " className=" ">
           <b className="flex flex-row justify-between my-6">

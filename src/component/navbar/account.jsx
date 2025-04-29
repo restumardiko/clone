@@ -9,7 +9,7 @@ function Account() {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="white"
-        className="size-11"
+        className="md:size-11 size-8"
       >
         <path
           strokeLinecap="round"

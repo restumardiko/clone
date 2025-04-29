@@ -12,7 +12,7 @@ function Wishlist() {
   const { wish } = useContext(BookContext);
   return (
     <Link className="my-auto" to="/wishlist">
-      <h1 className="static h-auto text-white text-end mx-2 ">{wish.length}</h1>
+      <h1 className="static h-auto text-white text-end mx-1 ">{wish.length}</h1>
       <button onClick={onWish} className=" px-3 relative -top-[0.80rem] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ function Wishlist() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="white"
-          className="size-12 "
+          className="md:size-12 size-7"
         >
           <path
             strokeLinecap="round"
