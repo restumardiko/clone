@@ -26,7 +26,7 @@ function Input() {
       </select>
       <form onSubmit={handleClick} className="flex flex-row lg:w-full w-full">
         <input
-          className="h-14 w-[27rem]  lg:w-96 px-8 text-gray-600 text-xl"
+          className="h-14 w-[85%]  lg:w-96 px-8 text-gray-600 text-xl"
           type="text"
           required
           onChange={handleChange}

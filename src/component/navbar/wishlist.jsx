@@ -2,25 +2,21 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BookContext } from "../App";
 
-function onWish(e) {
-  // e.preventDefault();
-
-  console.log("wishlist clicked");
-}
-
 function Wishlist() {
   const { wish } = useContext(BookContext);
   return (
     <Link className="my-auto" to="/wishlist">
-      <h1 className="static h-auto text-white text-end mx-1 ">{wish.length}</h1>
-      <button onClick={onWish} className=" px-3 relative -top-[0.80rem] ">
+      <h1 className="static h-auto text-white text-end mx-2  ">
+        {wish.length}
+      </h1>
+      <button className=" px-3 relative -top-[0.55rem] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="white"
-          className="md:size-12 size-7"
+          className="lg:size-12 size-7"
         >
           <path
             strokeLinecap="round"

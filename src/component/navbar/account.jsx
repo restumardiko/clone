@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 function Account() {
   return (
-    <Link className="my-auto " to="/account">
+    <Link className="my-auto px-3 " to="/account">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="white"
-        className="md:size-11 size-8"
+        className="lg:size-11 size-8"
       >
         <path
           strokeLinecap="round"
