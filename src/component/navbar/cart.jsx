@@ -32,7 +32,7 @@ function Cart() {
       </Link>
       <div
         id="drop-down"
-        className=" absolute bg-red-700 w-[23%] -ml-64 p-5 top-16 mt-28 md:group-hover:block min-h-40 shadow-lg hidden z-10 text-white"
+        className=" hidden absolute bg-red-700 w-[23%] -ml-64 p-5 top-16 mt-28 md:group-hover:block min-h-40 shadow-lg lg:hidden z-10 text-white"
       >
         <div id="drop-down-header " className=" ">
           <b className="flex flex-row justify-between my-6">

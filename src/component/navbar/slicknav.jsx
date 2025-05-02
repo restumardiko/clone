@@ -1,6 +1,6 @@
-export default function Slickav() {
+export default function Slicknav({ slack }) {
   return (
-    <div>
+    <div onClick={slack} className="">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

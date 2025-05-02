@@ -1,10 +1,12 @@
+import { useState } from "react";
 import SheetHov from "./sheetHov";
 
-function Categories() {
+function Categories({ handleCategory, isCategorySpread }) {
   return (
     <div
       id="categories "
-      className="px-5 hover:text-white h-full  text-center group hover:bg-red-700 z-20 "
+      onClick={handleCategory}
+      className="  lg:px-5 lg:hover:text-white lg:h-full  lg:text-center lg:group lg:hover:bg-red-700 lg:z-20 "
     >
       <button className="h-full">
         <h2 className="">
@@ -14,7 +16,8 @@ function Categories() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="size-5 inline-block mx-1"
+              className="size-5 inline-block mx-1 text-orange-300 lg:text-white"
+              style={isCategorySpread ? {} : { transform: "rotate(270deg)" }}
             >
               <path
                 fillRule="evenodd"

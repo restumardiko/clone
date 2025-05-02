@@ -2,7 +2,7 @@ function PreOrder() {
   return (
     <div
       id="preorder"
-      className="px-5 hover:text-white hover:bg-red-700 h-full text-center "
+      className="lg:px-5 lg:hover:text-white lg:hover:bg-red-700 lg:h-full lg:text-center "
     >
       <button className="h-full">
         <h2>Pre-Order</h2>
