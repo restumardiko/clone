@@ -10,17 +10,17 @@ function Cart() {
   return (
     <div className="group   ">
       <Link className=" " to="/cart">
-        <h1 className="static  text-white text-end mb-1 mx-2 ">
+        <h1 className="static  text-white text-end pb-[0.22rem] lg:text-sm mx-2 ">
           {cart.length}
         </h1>
-        <div className="relative px-3 -top-[0.85rem] ">
+        <div className="relative px-3 -top-[0.80rem] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="white"
-            className=" size-7   "
+            className=" size-7 lg:size-6  "
           >
             <path
               strokeLinecap="round"

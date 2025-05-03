@@ -13,9 +13,9 @@ function Input() {
     // handle(search);
   };
   return (
-    <div className="flex   items-center border border-white rounded-md w-full h-12 lg:h-14 overflow-hidden  mx-auto">
+    <div className="flex lg:absolute lg:top-4 lg:left-[22rem]  items-center border border-white rounded-md w-full h-12 lg:h-10  overflow-hidden lg:w-[40%]  mx-auto">
       <select
-        className="lg:block hidden bg-white lg:px-4 text-center border border-r-gray-400 h-full"
+        className="lg:block hidden bg-white lg:px-2 text-center border border-r-gray-300 h-full lg:text-sm lg:text-gray-500 "
         name="filter-category"
       >
         <option value="0">All Category</option>
@@ -26,15 +26,15 @@ function Input() {
       </select>
       <form onSubmit={handleClick} className="flex flex-row lg:w-full w-full">
         <input
-          className="h-14 w-[85%]  lg:w-96 px-8 text-gray-600 text-xl"
+          className="h-14 w-[85%]  lg:w-92 px-8 text-gray-600 text-xl lg:text-sm"
           type="text"
           required
           onChange={handleChange}
-          placeholder="search by title / author / ISE"
+          placeholder="search by title / author / ISBN"
         />
         <button
           type="submit"
-          className="p-2 w-10  hover:bg-orange-400 mx-auto "
+          className="p-2 w-10  lg:w-16   hover:bg-orange-400 mx-auto lg:mx-0 "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ function Input() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="white"
-            className="lg:size-9 size-7 "
+            className="lg:size-6 size-7 lg:mx-auto"
           >
             <path
               strokeLinecap="round"
