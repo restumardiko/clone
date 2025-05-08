@@ -7,7 +7,7 @@ export default function Slicknav({ slack }) {
         viewBox="0 0 24 24"
         strokeWidth="2"
         stroke="orange"
-        className="size-10 lg:hidden drop-shadow-sm"
+        className="size-7 lg:hidden drop-shadow-sm"
       >
         <path
           strokeLinecap="round"

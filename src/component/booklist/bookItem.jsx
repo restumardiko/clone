@@ -27,7 +27,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
       <ul
         className={
           isSpread
-            ? "gap-2 flex-row flex flex-wrap justify-center w-full h-auto"
+            ? "gap-2 flex-row flex flex-wrap justify-center w-full h-auto shrink-0"
             : " flex flex-row  w-full h-auto"
         }
       >
@@ -45,14 +45,14 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
           >
             <div
               id="single-book"
-              className="group w-60 h-full mx-auto text-xl overflow-hidden "
+              className="group w-40 h-full mx-auto text-sm overflow-hidden "
             >
               <button className="block mx-auto">
                 <img
                   onClick={() => {
                     handelSingleBook(book);
                   }}
-                  className=" w-44 mx-auto"
+                  className=" w-32 mx-auto"
                   src={book.cover}
                   alt=""
                 />

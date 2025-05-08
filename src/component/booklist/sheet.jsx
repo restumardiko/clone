@@ -92,9 +92,11 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex shadow-md flex-col  m-16 mx-40 bg-white h-auto items-center px-8 pt-8 pb-4">
+      <div className="flex shadow-md flex-col  lg:m-16   lg:mx-40 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
         <div className=" justify-center h-20 ">
-          <b className=" text-gray-700 text-5xl">{sheetName}</b>
+          <h1 className=" text-gray-700 text-center font-bold text-xl ">
+            {sheetName}
+          </h1>
           <div className="w-24 mx-auto my-6 h-1 bg-red-700"></div>
         </div>
 
@@ -115,7 +117,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             className={
               isSpread
                 ? "hidden"
-                : "inline w-20 h-20 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl  bg-white "
+                : "lg:inline hidden w-20 h-20 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl  bg-white "
             }
           >
             <svg
@@ -140,7 +142,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             className={
               isSpread
                 ? "hidden"
-                : "inline w-20 h-20 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2  bg-white"
+                : "lg:inline hidden w-20 h-20 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2  bg-white"
             }
           >
             <svg
@@ -163,7 +165,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           <button
             id={sheetName}
             onClick={(e) => fSpread(e)}
-            className="w-36 h-12 m-4 rounded-full bg-red-600 text-white font-bold text-xl "
+            className="w-36 h-12 m-4 rounded-full bg-red-600 text-white font-bold text-sm "
           >
             {spread}
           </button>

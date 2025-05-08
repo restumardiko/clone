@@ -19,8 +19,11 @@ function Subnav() {
     console.log(!isBargainSpread);
   }
   return (
-    <div id="subnav" className="lg:bg-gray-200  lg:block h-auto ">
-      <div className=" py-6 h-auto pb-2 flex flex-col gap-4 text-lg font-semibold text-white items-start lg:items-center lg:flex-row lg:bg-gray-200 lg:h-14 lg:text-2xl lg:font-semibold lg:w-3/4 lg:mx-auto ">
+    <div
+      id="subnav"
+      className="lg:bg-gray-200 lg:w-full lg:block h-auto lg:px-10 "
+    >
+      <div className=" py-6 lg:py-0 h-auto pb-2 flex flex-col gap-4 lg:gap-0 text-sm font-semibold text-white items-start lg:items-center lg:text-gray-800 lg:flex-row lg:bg-gray-200 lg:h-10 lg:text-sm lg:font-semibold lg:w-full lg:mx-auto ">
         <Categories
           handleCategory={handleCategory}
           isCategorySpread={isCategorySpread}

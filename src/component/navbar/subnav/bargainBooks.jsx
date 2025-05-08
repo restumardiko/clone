@@ -4,10 +4,10 @@ function BargainBooks({ handleBargain, isBargainSpread }) {
   return (
     <div
       id="Bargain"
-      className="lg:px-5 lg:hover:text-white lg:h-full  lg:text-center lg:group lg:hover:bg-red-700 lg:z-20"
+      className="lg:px-5 lg:hover:text-white lg:h-full  lg:text-center group lg:hover:bg-red-700 lg:z-20"
       onClick={handleBargain}
     >
-      <button className="h-full">
+      <button className="h-full  ">
         <h2>
           Bargain Books
           {
@@ -15,7 +15,7 @@ function BargainBooks({ handleBargain, isBargainSpread }) {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="size-5 inline-block mx-1 text-orange-300"
+              className="size-4 inline-block mx-1 text-orange-300"
               style={isBargainSpread ? {} : { transform: "rotate(270deg)" }}
             >
               <path

@@ -10,17 +10,17 @@ function Cart() {
   return (
     <div className="group   ">
       <Link className=" " to="/cart">
-        <h1 className="static  text-white text-end pb-[0.22rem] lg:text-sm mx-2 ">
+        <h1 className="static text-xs  text-white text-end pb-[0.22rem] lg:text-sm mx-2 ">
           {cart.length}
         </h1>
-        <div className="relative px-3 -top-[0.80rem] ">
+        <div className="relative px-3 -top-[0.85rem] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="white"
-            className=" size-7 lg:size-6  "
+            className=" size-5 lg:size-6  "
           >
             <path
               strokeLinecap="round"
@@ -32,7 +32,7 @@ function Cart() {
       </Link>
       <div
         id="drop-down"
-        className=" hidden absolute bg-red-700 w-[23%] -ml-64 p-5 top-16 mt-28 md:group-hover:block min-h-40 shadow-lg lg:hidden z-10 text-white"
+        className=" hidden lg:absolute bg-red-700 w-[23%] -ml-64 lg:p-5 lg:top-8 lg:mt-20 lg:group-hover:block min-h-40 shadow-lg lg:hidden z-10 text-white lg:text-sm"
       >
         <div id="drop-down-header " className=" ">
           <b className="flex flex-row justify-between my-6">

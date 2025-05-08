@@ -6,7 +6,7 @@ function Wishlist() {
   const { wish } = useContext(BookContext);
   return (
     <Link className="my-auto" to="/wishlist">
-      <h1 className="static h-auto text-white lg:text-sm text-end mx-2  ">
+      <h1 className="static text-xs h-auto text-white lg:text-sm text-end mx-2  ">
         {wish.length}
       </h1>
       <button className=" px-3 relative -top-[0.55rem] ">
@@ -16,7 +16,7 @@ function Wishlist() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="white"
-          className=" size-7 lg:size-6"
+          className=" size-5 lg:size-6"
         >
           <path
             strokeLinecap="round"

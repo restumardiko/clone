@@ -15,15 +15,15 @@ export default function Navbar() {
   }
   return (
     <>
-      <div id="nav-container" className="fixed z-50 w-full top-0 shadow-md ">
-        <div className=" bg-red-700 px-5 pb-3 lg:pb-0 ">
-          <div className="flex 	flex-row h-20 lg:h-[4.3rem] lg:w-full lg:mx-auto  justify-between lg:text-md  ">
+      <div id="nav-container" className="fixed z-50 w-[100%] top-0 shadow-md ">
+        <div className=" bg-red-700 px-3 lg:px-0 pb-3 lg:pb-0 ">
+          <div className="flex 	flex-row h-16 lg:h-[4.3rem] lg:w-full lg:mx-auto  justify-between lg:text-md  ">
             <Link className="my-auto" to="/">
               <div className="text-white lg:ml-20 lg:h-14 ">
-                <h1 className="  text-[2.1rem] lg:text-[1.55rem] lg:tracking-wider  font-semibold  ">
+                <h1 className="  text-[1.5rem] lg:text-[1.55rem] lg:tracking-wider  font-semibold  ">
                   PERIPLUS.COM
                 </h1>
-                <h2 className="text-lg -mt-3 lg:text-sm lg:py-1">
+                <h2 className="text-sm -mt-3 lg:text-sm lg:py-1">
                   Indonesia's largest bookstore
                 </h2>
               </div>
@@ -35,11 +35,7 @@ export default function Navbar() {
               <Slicknav slack={onSlack} />
             </div>
           </div>
-          <div
-            className={
-              isSlack ? "lg:hidden  h-auto " : "lg:hidden hidden h-auto "
-            }
-          >
+          <div className={isSlack ? "  h-auto " : "lg:hidden hidden h-auto "}>
             <Subnav />
           </div>
           <Input />

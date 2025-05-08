@@ -24,7 +24,7 @@ function Container() {
   // };
 
   return (
-    <div className="pt-40">
+    <div className="pt-40 w-full ">
       {/* <Iklan /> */}
       <Content data={data} />
     </div>

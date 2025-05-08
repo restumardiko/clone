@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function AccountInside() {
   return (
-    <div id="container" className="m-auto bg-white h-full">
+    <div
+      id="container"
+      className="m-auto bg-white h-full outline outline-red-500"
+    >
       <Link to="/">
         <div id="titel">
           {/* <h1>PERIPLUS</h1>
