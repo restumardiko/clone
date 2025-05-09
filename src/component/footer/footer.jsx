@@ -1,25 +1,25 @@
 export default function Footer() {
   return (
-    <div className="bg-white mt-16 block  w-full px-40  h-auto flex-wrap pt-20 flex-col text-blue-600  text-3xl font-bold  ">
-      <div className="image flex flex-row h-48  text-center ">
-        <div id="shiping" className=" inline-block  w-[25%]  ">
+    <div className="bg-white mt-16 block  w-full   h-auto flex-wrap pt-20 flex-col text-blue-600  text-sm font-bold  ">
+      <div className="image flex flex-col  lg:flex-row h-auto  text-center ">
+        <div id="shiping" className=" inline-block  lg:w-[25%]  ">
           <h1 className=""> Delivered By :</h1>
           <img className="h-28 my-4 mx-auto" src="src/shipping.png" alt="" />
         </div>
-        <div id="payment" className="inline-block w-[25%] h-auto">
+        <div id="payment" className="inline-block lg:w-[25%] h-auto">
           <h1 className="inline">Payment Method :</h1>
           <img className="mx-auto h-28" src="src/payments.png" alt="" />
         </div>
-        <div className="inline-block w-[25%] h-full p-8">
+        <div className="inline-block lg:w-[25%] h-full p-8">
           <img className="h-28 mx-auto my-4" src="src/banks.png" alt="" />
         </div>
-        <div className="secured-by inline-block w-[25%] h-full ">
+        <div className="secured-by inline-block lg:w-[25%] h-full ">
           <h1> Secured by :</h1>
           <img className="mx-auto my-4 h-20" src="src/digicert.png" alt="" />
         </div>
       </div>
-      <div className="contact-container flex h-auto text-gray-900 text-2xl font-normal my-10 flex-row">
-        <div className="information flex-col w-[20%] ">
+      <div className="contact-container flex h-auto text-gray-900 text-sm font-normal my-10 flex-col lg:flex-row">
+        <div className="information flex-col lg:w-[20%] ">
           <div className="flex-col w-[80%] mx-auto">
             <h1 className="text-3xl font-bold pb-8">Information</h1>
             <ul className="space-y-4">
@@ -33,9 +33,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="Customer-service  w-[20%]">
+        <div className="Customer-service  lg:w-[20%]">
           <div className="flex-col w-[80%] mx-auto">
-            <h1 className="text-3xl font-bold pb-8">Customer Service</h1>
+            <h1 className="text-xl font-bold pb-8">Customer Service</h1>
             <ul className="space-y-4">
               <li>Contact Us</li>
               <li>Returns</li>
@@ -43,9 +43,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="My-account  w-[20%]">
+        <div className="My-account  lg:w-[20%]">
           <div className="flex-col w-[80%] mx-auto">
-            <h1 className="text-3xl font-bold pb-8">My Account</h1>
+            <h1 className="text-xl font-bold pb-8">My Account</h1>
             <ul className="space-y-4">
               <li>Account Details</li>
               <li>Order History</li>
@@ -54,9 +54,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="Follow_us flex-col w-[20%]">
+        <div className="Follow_us flex-col lg:w-[20%]">
           <div className="flex-col w-[80%] mx-auto">
-            <h1 className="text-3xl font-bold pb-8">Follow Us</h1>
+            <h1 className="text-xl font-bold pb-8">Follow Us</h1>
             <ul className="space-y-4">
               <li>Books & Promotion Udates :</li>
               <li className="">
@@ -114,7 +114,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="Contact_us  w-[30%]">
+        <div className="Contact_us  lg:w-[30%]">
           <div className="flex-col w-[80%] mx-auto ">
             <h1 className="text-3xl font-bold pb-8 ">Contact Us</h1>
             <ul className="space-y-4">

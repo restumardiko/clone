@@ -28,7 +28,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           setCurrentIndex((prev) =>
             prev === datas.books.length ? -6 : prev + 1
           );
-        }, 2000);
+        }, 200000);
         //setIsRunning(true);
       }
     }
@@ -37,7 +37,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   useEffect(() => {
     interv.current = setInterval(() => {
       setCurrentIndex((prev) => (prev === datas.books.length ? -6 : prev + 1));
-    }, 2000);
+    }, 200000);
     //setIsRunning(true);
     return () => clearInterval(interv.current); // Clear interval when component unmounts
   }, [datas.books]);
@@ -92,12 +92,12 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex shadow-md flex-col  lg:m-16   lg:mx-40 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
+      <div className="flex shadow-md flex-col mb-5 pt-12 lg:m-16   lg:mx-40 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
         <div className=" justify-center h-20 ">
-          <h1 className=" text-gray-700 text-center font-bold text-xl ">
+          <h1 className=" text-gray-700 text-center font-bold  text-xl  ">
             {sheetName}
           </h1>
-          <div className="w-24 mx-auto my-6 h-1 bg-red-700"></div>
+          <div className="w-16 mx-auto mt-3  h-[0.10rem] bg-red-700"></div>
         </div>
 
         <BookItem
@@ -117,7 +117,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             className={
               isSpread
                 ? "hidden"
-                : "lg:inline hidden w-20 h-20 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-60 left-[-47%] -translate-y-1/2 text-5xl  bg-white "
+                : "lg:inline  w-10 h-10 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-40 left-[-40%] -translate-y-1/2 text-5xl  bg-white "
             }
           >
             <svg
@@ -125,8 +125,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-11 mx-auto"
+              stroke="gray"
+              className="size-7 mx-auto"
             >
               <path
                 strokeLinecap="round"
@@ -142,7 +142,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             className={
               isSpread
                 ? "hidden"
-                : "lg:inline hidden w-20 h-20 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-60 left-[47%] text-5xl -translate-y-1/2  bg-white"
+                : "lg:inline  w-10 h-10 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-40 left-[40%] text-5xl -translate-y-1/2  bg-white"
             }
           >
             <svg
@@ -150,8 +150,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-11 m-auto"
+              stroke="gray"
+              className="size-7 m-auto"
             >
               <path
                 strokeLinecap="round"
@@ -165,7 +165,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           <button
             id={sheetName}
             onClick={(e) => fSpread(e)}
-            className="w-36 h-12 m-4 rounded-full bg-red-600 text-white font-bold text-sm "
+            className="w-32 h-8 m-4 rounded-full bg-red-600 text-white font-semibold text-sm "
           >
             {spread}
           </button>

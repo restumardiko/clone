@@ -20,15 +20,15 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
     <div
       className={
         isSpread
-          ? "flex h-auto w-[98%]  justify-center"
-          : "flex h-[30rem] w-[98%] overflow-hidden justify-center"
+          ? "flex h-auto w-[100%]  justify-center"
+          : "flex lg:h-[30rem] h-[22rem] w-[100%] overflow-hidden justify-center"
       }
     >
       <ul
         className={
           isSpread
-            ? "gap-2 flex-row flex flex-wrap justify-center w-full h-auto shrink-0"
-            : " flex flex-row  w-full h-auto"
+            ? "lg:gap-2  flex-row flex flex-wrap justify-center w-full h-auto "
+            : " flex flex-row gap-0 w-full h-auto "
         }
       >
         {data.map((book) => (
@@ -36,8 +36,8 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
             style={!isSpread ? { transform: `translateX(${-hem * 100}%)` } : {}}
             className={
               hem === -6 || hem === 12
-                ? "px-8 pt-8 transition duration-0  w-[18%] h-[29rem]  "
-                : "px-8 pt-8 transition duration-2000  w-[18%] h-[29rem]"
+                ? "lg:px-8 lg:pt-8 transition duration-0  lg:w-[18%] lg:h-[29rem]  "
+                : "lg:px-8 lg:pt-8 transition duration-2000  lg:w-[18%] lg:h-[29rem]"
             }
             onMouseEnter={() => fStopRunning()}
             onMouseLeave={() => fStartRunning()}
@@ -45,7 +45,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
           >
             <div
               id="single-book"
-              className="group w-40 h-full mx-auto text-sm overflow-hidden "
+              className="group w-52 lg:w-38 h-full mx-auto text-sm overflow-hidden "
             >
               <button className="block mx-auto">
                 <img
@@ -59,18 +59,23 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
               </button>
 
               <div className="mx-3">
-                <h4 className="text-gray-600 font-bold overflow-hidden h-7">
+                <h4 className="bg-red-700 w-24 pl-2 h-[1.1rem] my-2 text-white font-semibold rounded-r-xl text-[0.68rem]">
+                  Fast Delivery
+                </h4>
+                <h4 className="text-gray-600 font-semibold overflow-hidden  h-5 mb-3">
                   {book.title}
                 </h4>
-                <h4 className="text-blue-600 font-semibold">{book.author}</h4>
-                <h4 className="text-gray-500"> Paperback</h4>
+                <h4 className="text-blue-600 text-xs font-semibold my-1">
+                  {book.author}
+                </h4>
+                <h4 className="text-gray-500 text-xs my-1"> Paperback</h4>
 
-                <h4 className="font-bold text-2xl text-gray-700">
+                <h4 className="font-bold text-sm text-gray-900 mt-2">
                   Rp.{book["price"].toLocaleString()}
                 </h4>
               </div>
 
-              <div className="mt-36 group-hover:mt-2 ease-in duration-300 text-red-600 text-2xl font-bold ">
+              <div className="lg:mt-36 hidden  lg:group-hover:mt-2 ease-in duration-300 text-red-600 text-sm font-bold ">
                 <button
                   className="border-r-2 border-solid  px-4"
                   onClick={() => {
@@ -90,7 +95,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="size-8 -mb-2 mx-2 "
+                    className="size-5 -mb-2 mx-2 "
                   >
                     <path
                       strokeLinecap="round"
@@ -110,7 +115,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="size-8 -mb-2 mx-2 "
+                    className="size-5 -mb-2 mx-2 "
                   >
                     <path
                       strokeLinecap="round"
