@@ -7,7 +7,7 @@ function SheetHov({ list }) {
     </li>
   ));
   return (
-    <div className="lg:absolute lg:-ml-5  shadow-md lg:p-3 bg-white text-black lg:top-[6.9rem] lg:text-left group-hover:block hidden z-10 ">
+    <div className="lg:absolute lg:-ml-5  shadow-md lg:p-3 bg-white text-black lg:top-[6.9rem] lg:text-left lg:group-hover:block hidden z-10 ">
       <ul className="">{ls}</ul>
     </div>
   );

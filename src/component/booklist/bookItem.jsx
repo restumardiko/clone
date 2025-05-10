@@ -21,14 +21,14 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
       className={
         isSpread
           ? "flex h-auto w-[100%]  justify-center"
-          : "flex lg:h-[30rem] h-[22rem] w-[100%] overflow-hidden justify-center"
+          : "flex lg:h-[24rem] h-[22rem] w-[100%] overflow-hidden justify-center"
       }
     >
       <ul
         className={
           isSpread
             ? "lg:gap-2  flex-row flex flex-wrap justify-center w-full h-auto "
-            : " flex flex-row gap-0 w-full h-auto "
+            : " flex flex-row gap-0 w-full h-auto lg:h-96 "
         }
       >
         {data.map((book) => (
@@ -36,8 +36,8 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
             style={!isSpread ? { transform: `translateX(${-hem * 100}%)` } : {}}
             className={
               hem === -6 || hem === 12
-                ? "lg:px-8 lg:pt-8 transition duration-0  lg:w-[18%] lg:h-[29rem]  "
-                : "lg:px-8 lg:pt-8 transition duration-2000  lg:w-[18%] lg:h-[29rem]"
+                ? "  transition duration-0 h-auto lg:h-96    "
+                : "  transition duration-2000 h-auto lg:h-96  "
             }
             onMouseEnter={() => fStopRunning()}
             onMouseLeave={() => fStartRunning()}
@@ -45,7 +45,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
           >
             <div
               id="single-book"
-              className="group w-52 lg:w-38 h-full mx-auto text-sm overflow-hidden "
+              className="group w-44 lg:w-38 h-full lg:h-[90%]  mx-auto my-4 text-sm overflow-hidden "
             >
               <button className="block mx-auto">
                 <img
@@ -75,7 +75,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
                 </h4>
               </div>
 
-              <div className="lg:mt-36 hidden  lg:group-hover:mt-2 ease-in duration-300 text-red-600 text-sm font-bold ">
+              <div className="lg:mt-28 hidden lg:block  lg:group-hover:mt-0 ease-in duration-300 text-red-600 text-sm font-bold ">
                 <button
                   className="border-r-2 border-solid  px-4"
                   onClick={() => {

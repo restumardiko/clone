@@ -6,10 +6,10 @@ function Wishlist() {
   const { wish } = useContext(BookContext);
   return (
     <Link className="my-auto" to="/wishlist">
-      <h1 className="static text-xs h-auto text-white lg:text-sm text-end mx-2  ">
+      <h1 className="static text-xs h-auto text-white lg:text-sm text-end   ">
         {wish.length}
       </h1>
-      <button className=" px-3 relative -top-[0.55rem] ">
+      <button className=" px-2 relative -top-[0.3rem] lg:-top-[0.5rem] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

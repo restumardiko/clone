@@ -28,9 +28,9 @@ export default function NavSub({ title }) {
   return (
     <div
       id="cartPageNav"
-      className=" pl-[8%] text-2xl h-11 text-gray-600   bg-slate-50"
+      className=" pl-[8%] fixed text-sm h-auto  text-gray-600 w-full shadow-sm bg-slate-50"
     >
-      <div className=" w-80">
+      <div className=" w-auto  h-5 ">
         <Link to="/">
           <button>Home</button>
         </Link>
@@ -41,7 +41,7 @@ export default function NavSub({ title }) {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-6 inline mx-4"
+          className="size-4 inline mx-4"
         >
           <path
             strokeLinecap="round"

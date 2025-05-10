@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="contact-container flex h-auto py-4 text-gray-900 text-sm font-normal  flex-col lg:flex-row">
-        <div className="information flex-col lg:w-[20%] ">
+        <div className="information flex-col lg:py-4 lg:w-[20%] ">
           <div className="flex-col pl-5 lg:w-[80%] lg:mx-auto">
             <h1 className="text-xl font-semibold pb-4">Information</h1>
             <ul className="space-y-2">
@@ -128,8 +128,8 @@ export default function Footer() {
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#25D366"
-                  width="22"
-                  height="22"
+                  width="20"
+                  height="20"
                   stroke=""
                   className="inline-block mr-2"
                 >
@@ -144,8 +144,8 @@ export default function Footer() {
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#25D366"
-                  width="22"
-                  height="22"
+                  width="20"
+                  height="20"
                   stroke=""
                   className="inline-block mr-2"
                 >

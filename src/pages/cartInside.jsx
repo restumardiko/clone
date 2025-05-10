@@ -44,7 +44,7 @@ export default function CartInside({ cart, handleRemove }) {
   });
 
   return (
-    <div className="pt-[9.5rem]">
+    <div className="pt-[7.2rem]">
       <NavSub title={"Shoping Cart"} />
       <div id="cartProduct" className=" m-48 mb-2 mt-10 ">
         {cart.length === 0 ? (

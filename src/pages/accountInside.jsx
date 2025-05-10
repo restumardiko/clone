@@ -2,16 +2,13 @@ import { Link } from "react-router-dom";
 
 export default function AccountInside() {
   return (
-    <div
-      id="container"
-      className="m-auto bg-white h-full outline outline-red-500"
-    >
+    <div id="container" className="m-auto bg-white h-full">
       <Link to="/">
         <div id="titel">
           {/* <h1>PERIPLUS</h1>
           <h2>ONLINE</h2> */}
           <img
-            className="w-80 m-auto my-8"
+            className="w-40 m-auto py-4"
             src="src/logo-periplus.jpg"
             alt=""
           />
@@ -20,17 +17,17 @@ export default function AccountInside() {
 
       <div
         id="login-border"
-        className="w-[30%] mx-auto my-4 border-2 border-gray-300 p-7  h-auto"
+        className="lg:w-[30%] mx-auto my-4 border-2 border-gray-300 p-7  h-auto"
       >
         <div
           id="signin_header"
-          className="text-left font-semibold   text-5xl text-orange-600 font-sans mb-8 "
+          className="text-left font-semibold   text-xl text-orange-600 font-sans mb-8 "
         >
           <h1>Sign In to Your Account</h1>
         </div>
         <div
           id="table_form"
-          className="w-full text-3xl text-gray-800  rounded-lg"
+          className="w-full text-xl text-gray-800  rounded-lg"
         >
           <table className="w-full my-2  ">
             <tr>
@@ -66,7 +63,7 @@ export default function AccountInside() {
             <tr>
               <td>
                 <input
-                  className="bg-blue-600 w-full text-balance text-2xl h-10  text-white my-3 border-solid border-2 border-black rounded-md"
+                  className="bg-blue-600 w-full text-balance text-xl h-10  text-white my-3 border-solid border-2 border-black rounded-md"
                   type="submit"
                   value="Login"
                 />

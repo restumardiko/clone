@@ -1,5 +1,5 @@
 import Content from "./booklist/content";
-import Iklan from "./iklan/iklan";
+
 import data from "../utils";
 import { createContext, useState } from "react";
 

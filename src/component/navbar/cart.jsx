@@ -10,10 +10,10 @@ function Cart() {
   return (
     <div className="group   ">
       <Link className=" " to="/cart">
-        <h1 className="static text-xs  text-white text-end pb-[0.22rem] lg:text-sm mx-2 ">
+        <h1 className="static text-xs  text-white text-end pb-[0.22rem] lg:text-sm  ">
           {cart.length}
         </h1>
-        <div className="relative px-3 -top-[0.85rem] ">
+        <div className="relative px-2 -top-[0.6rem] lg:-top-[0.8rem] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

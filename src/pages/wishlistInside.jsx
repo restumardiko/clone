@@ -63,25 +63,25 @@ function WishlistBook() {
 
 function WishListInside() {
   const { wish } = useContext(BookContext);
-  console.log("hehheheheh");
+
   return (
-    <div className="pt-[9.5rem]">
+    <div className="pt-[7.2rem]">
       <NavSub title={"Wish List"} />
       <div id="background" className="  h-auto w-[85%] mx-auto mt-10 ">
         <div
           id="title-container"
-          className="bg-white w-full  inline-block h-auto shadow-md text-5xl font-bold text-gray-600 p-10 rounded"
+          className="bg-white w-full  inline-block h-auto shadow-md text-xl font-bold text-gray-600 p-10 rounded"
         >
           <h1>My Wish List</h1>
         </div>
-        <div className="w-full my-5 bg-white inline-block h-auto p-10 text-[1.5rem] shadow-md rounded">
+        <div className="w-full my-5 bg-white inline-block h-auto p-10 text-sm shadow-md rounded">
           <input
             type="form"
             maxLength={20}
-            className=" h-12 border-gray-300 border-2  my-2 px-4 rounded "
+            className=" h-8 border-gray-300 border-2  my-2 px-4 rounded "
             placeholder="Enter name or e-mail"
           ></input>
-          <button className="bg-blue-700 w-40 text-white h-12 mx-1 rounded ">
+          <button className="bg-blue-700 w-40 text-white h-8 mx-1 rounded ">
             GO!
           </button>
           <h3 className="text-gray-500 font-semibold">

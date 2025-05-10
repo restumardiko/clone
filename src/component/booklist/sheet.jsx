@@ -92,7 +92,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex shadow-md flex-col mb-5 pt-12 lg:m-16   lg:mx-40 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
+      <div className="flex shadow-md flex-col mb-5 pt-10 lg:m-16   lg:mx-40 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
         <div className=" justify-center h-20 ">
           <h1 className=" text-gray-700 text-center font-bold  text-xl  ">
             {sheetName}
@@ -117,7 +117,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             className={
               isSpread
                 ? "hidden"
-                : "lg:inline  w-10 h-10 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-40 left-[-40%] -translate-y-1/2 text-5xl  bg-white "
+                : "lg:inline  w-10 h-10 rounded-full shadow-md text-gray-700 border-gray-200 border-solid border relative -top-40 lg:left-[-50%] left-[-40%] -translate-y-1/2 text-5xl  bg-white "
             }
           >
             <svg
@@ -142,7 +142,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
             className={
               isSpread
                 ? "hidden"
-                : "lg:inline  w-10 h-10 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-40 left-[40%] text-5xl -translate-y-1/2  bg-white"
+                : "lg:inline  w-10 h-10 rounded-full relative shadow-md text-gray-700 border-gray-200 border-solid border  -top-40 lg:left-[50%] left-[40%] text-5xl -translate-y-1/2  bg-white"
             }
           >
             <svg
