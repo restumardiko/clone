@@ -17,7 +17,7 @@ export default function AccountInside() {
 
       <div
         id="login-border"
-        className="lg:w-[30%] lg:mx-auto mt-4 border-[0.1rem] border-gray-400 p-3 mx-2  h-auto"
+        className="w-[21rem] lg:w-96 lg:mx-auto my-4 border-[0.1rem] border-gray-400 p-3 mx-auto  h-auto"
       >
         <div
           id="signin_header"
@@ -79,8 +79,11 @@ export default function AccountInside() {
         </div>
         <div className="text-center text-xs text-gray-600 mt-2">
           <b>Or Login With</b>
-          <img src="src/google.png" className="w-28 mx-auto my-3" />
+          <img src="src/google.png" className="w-28 mx-auto my-5" />
         </div>
+      </div>
+      <div className="text-center text-[0.7rem] text-gray-500">
+        © 2011-2025 Periplus Holding Ltd.
       </div>
     </div>
   );
