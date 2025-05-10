@@ -44,55 +44,53 @@ export default function CartInside({ cart, handleRemove }) {
   });
 
   return (
-    <div className="pt-[7.2rem]">
+    <div className="pt-[7.2rem] lg:pt-[6.8rem]">
       <NavSub title={"Shoping Cart"} />
-      <div id="cartProduct" className=" m-48 mb-2 mt-10 ">
+      <div id="cartProduct" className="  mb-2 mt-10 lg:mt-14   ">
         {cart.length === 0 ? (
-          <div className="text-gray-600 ">
-            <h1 className="text-7xl font-extrabold ">Shopping Cart</h1>
-            <h2 className="text-2xl font-semibold my-2">
-              Your Shopping Cart is Empty
-            </h2>
+          <div className="text-gray-600 mx-4 px-4 lg:px-10 lg:mx-0 bg-white bg-opacity-95">
+            <h1 className="text-4xl font-bold ">Shopping Cart</h1>
+            <h2 className="text-base  my-1 ">Your Shopping Cart is Empty</h2>
             <Link to="/">
-              <button className="text-2xl font-semibold my-2">Continue</button>
+              <button className="text-base  my-1">Continue</button>
             </Link>
           </div>
         ) : (
           <>
-            <ul className="bg-white">
+            <ul className="bg-white w-[95%] mx-auto lg:w-[80%]  ">
               {cart.map((book) => (
                 <li
-                  className="flex flex-row w-full shadow-md p-8"
+                  className="flex flex-row lg:gap-12 w-full shadow-sm py-4 px-4 lg:px-8 lg:py-8 "
                   key={book.id}
                 >
-                  <div className="inline m-5 pt-2">
-                    <img className="w-32 h-48 mx-20 " src={book.cover} alt="" />
+                  <div className="inline m-2 pt-2">
+                    <img className="w-24  " src={book.cover} alt="" />
                   </div>
-                  <div className="pt-10">
+                  <div className="pt-8">
                     <div className="inline ">
-                      <h1 className="text-2xl font-bold opacity-70">
+                      <h1 className="text-sm font-bold opacity-70">
                         {book.title}
                       </h1>
-                      <h1 className="text-2xl opacity-50">{book.author}</h1>
+                      <h1 className="text-sm opacity-50">{book.author}</h1>
                       {/* <h1>{book.year}</h1> */}
-                      <h1 className="text-2xl font-semibold text-gray-600 m-2">
+                      <h1 className="text-sm font-semibold text-gray-600 my-2">
                         Rp.{book["price"].toLocaleString()}
                       </h1>
                     </div>
                     <div
                       id="how-much-item"
-                      className="flex flex-row border justify-center items-center  border-solid w-60 border-gray-300  text-4xl text-center"
+                      className="flex flex-row border justify-center items-center border-solid w-[7.5rem] border-gray-300  text-xl text-center"
                     >
                       <button
                         onClick={() => {
                           minus(book.id);
                         }}
                         id="decrease-item"
-                        className="w-20 h-20 text-gray-500 py-3"
+                        className="w-10 h-10 text-gray-500 text-2xl "
                       >
                         -
                       </button>
-                      <h1 className="h-20 w-20 text-gray-500 py-5 text-2xl ">
+                      <h1 className="h-10 w-10 text-gray-500 text-base pt-2 ">
                         {quantity[book.id]}
                       </h1>
                       <button
@@ -100,14 +98,14 @@ export default function CartInside({ cart, handleRemove }) {
                           plus(book.id);
                         }}
                         id="increase-item"
-                        className="w-20 h-20 text-gray-500 py-3"
+                        className="w-10 h-10 text-gray-500 "
                       >
                         +
                       </button>
                     </div>
-                    <div className=" remove text-xl ">
+                    <div className=" remove text-xs ">
                       <button
-                        className=" bg-slate-200 shadow-md border-gray-300 border p-1 px-14 mt-10 hover:bg-orange-500 hover:text-white"
+                        className=" bg-slate-200 shadow-sm border-gray-300 border p-1 px-8  mt-5 hover:bg-orange-500 hover:text-white"
                         onClick={() => {
                           handleRemove(book.id);
                         }}
@@ -119,8 +117,8 @@ export default function CartInside({ cart, handleRemove }) {
                 </li>
               ))}
             </ul>
-            <div className="container-lastSection w-full flex justify-end shadow-md bg-white mt-2">
-              <div className="total-amount h-auto b m-20 mt-3 w-80 text-justify text-2xl ">
+            <div className="container-lastSection  flex lg:justify-end  shadow-md bg-white mt-1 w-[95%] lg:w-[80%] mx-auto lg:mb-8 ">
+              <div className="total-amount h-auto b m-16 mt-3 w-80 lg:w-56 text-justify text-base mx-auto lg:mx-10 ">
                 <div className="flex justify-between my-2  ">
                   <h2>Sub-Total </h2>
                   <h2> Rp.{harga.toLocaleString()}</h2>
@@ -131,10 +129,10 @@ export default function CartInside({ cart, handleRemove }) {
                 </div>
 
                 <button
-                  className="bg-gray-800  text-white w-full h-[4rem] block hover:bg-orange-500"
+                  className="bg-gray-800  text-xs font-semibold text-white w-full h-10 block lg:hover:bg-orange-500"
                   onClick={checkout}
                 >
-                  CHECK OUT
+                  CHECKOUT
                 </button>
               </div>
             </div>

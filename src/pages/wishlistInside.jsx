@@ -65,7 +65,7 @@ function WishListInside() {
   const { wish } = useContext(BookContext);
 
   return (
-    <div className="pt-[7.2rem]">
+    <div className="pt-[7.2rem] lg:pt-[6.8rem]">
       <NavSub title={"Wish List"} />
       <div id="background" className="  h-auto w-[85%] mx-auto mt-10 ">
         <div

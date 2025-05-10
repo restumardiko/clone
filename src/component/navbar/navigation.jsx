@@ -28,9 +28,9 @@ export default function NavSub({ title }) {
   return (
     <div
       id="cartPageNav"
-      className=" pl-[8%] fixed text-sm h-auto  text-gray-600 w-full shadow-sm bg-slate-50"
+      className=" flex pl-[8%]   fixed text-sm  h-8  text-gray-600 w-full z-10 bg-slate-50"
     >
-      <div className=" w-auto  h-5 ">
+      <div className=" w-auto my-auto  h-5 ">
         <Link to="/">
           <button>Home</button>
         </Link>

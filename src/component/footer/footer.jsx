@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="bg-white mt-10 block  w-full   h-auto flex-wrap pt-5 flex-col text-blue-600  text-sm font-bold  ">
+    <div className="bg-white  block  w-full   h-auto flex-wrap py-5 flex-col text-blue-600  text-sm font-bold  ">
       <div className="image flex flex-col  lg:flex-row h-auto  text-center ">
         <div id="shiping" className=" inline-block  lg:w-[25%]  ">
           <h1 className="text-xl"> Delivered By :</h1>
@@ -160,7 +160,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="lg:text-end text-sm  lg:mb-8 font-normal text-gray-600">
+      <div className="lg:text-end text-sm  lg:mb-0 font-normal text-gray-600">
         <h4 className="inline mx-4 ">©2011-2025 Periplus Holding Ltd.</h4>
       </div>
     </div>
