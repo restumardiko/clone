@@ -92,7 +92,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
 
   return (
     <>
-      <div className="flex shadow-md flex-col mb-5 pt-10 lg:m-16   lg:mx-40 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
+      <div className="flex shadow-md flex-col mb-5 pt-10 lg:m-5   lg:mx-28 bg-white lg:h-auto lg:items-center lg:px-8 lg:pt-8 lg:pb-4">
         <div className=" justify-center h-20 ">
           <h1 className=" text-gray-700 text-center font-bold  text-xl  ">
             {sheetName}

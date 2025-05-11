@@ -21,10 +21,10 @@ export default function SearchSeet() {
   };
 
   return (
-    <div className="pt-56">
+    <div className="pt-[9rem] ">
       <div
         id="result-container "
-        className="w-[85%] mx-auto bg-white p-10 rounded-lg shadow-lg min-h-96"
+        className="w-[85%] mx-auto mb-8 bg-white p-10 rounded-lg shadow-md min-h-96"
       >
         {datas.length !== 0 ? (
           <BookItem

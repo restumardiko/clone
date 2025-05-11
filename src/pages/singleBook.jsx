@@ -12,7 +12,7 @@ export default function SingleBookInside() {
     <div id="background" className="pt-40 ">
       <div
         id="book_container"
-        className="w-[85%] bg-white mx-auto flex p-4 rounded-lg mt-20"
+        className="w-[85%] bg-white mb-8 mx-auto flex p-4 rounded-md mt-8"
       >
         <div className=" w-[30%] ">
           <img className="w-96 mx-auto my-10" src={book.cover} alt="" />
