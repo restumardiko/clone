@@ -9,34 +9,34 @@ function WishlistBook() {
   //const[]
 
   return (
-    <ul className="p-8 flex flex-col gap-2 ">
+    <ul className=" flex flex-col gap-4 ">
       {wish.map((book) => (
         <>
           <li
             key={book.id}
-            className="h-auto m-7  flex flex-row border-b-2 border-gray-300"
+            className="h-auto m-2 p-3 lg:gap-3  flex md:flex-row flex-col border-b-[0.1rem] border-gray-300"
           >
             <img
-              className="  h-56 inline mx-6 shadow-xl"
+              className="  md:h-40 w-24 mx-auto  inline md:mx-3 shadow-md"
               src={book.cover}
               alt=""
             />
-            <div className="inline-block w-full p-6">
-              <h1 className="text-2xl font-semibold my-2">{book.title}</h1>
-              <h2 className="text-xl font-semibold italic text-gray-500 my-1">
+            <div className="inline-block w-full p-2">
+              <h1 className="text-sm font-semibold my-2">{book.title}</h1>
+              <h2 className="text-sm font-semibold italic text-gray-500 my-1">
                 Paperback
               </h2>
-              <h1 className="font-semibold text-blue-700 text-xl">
+              <h1 className="font-semibold text-blue-700 text-sm">
                 {book.author}
               </h1>
-              <h1 className="text-red-600 font-semibold text-xl">
+              <h1 className="text-red-600 font-semibold text-md">
                 Rp. {book["price"].toLocaleString()}
               </h1>
 
-              <h1 className="text-2xl py-6">Shared this item ?</h1>
-              <div className="py-2">
+              <h1 className="text-sm py-2">Shared this item ?</h1>
+              <div className="py-1">
                 <button
-                  className="text-2xl py-2 px-5"
+                  className="text-sm py-1 px-5"
                   onClick={() => {
                     handleEdite(book.id);
                   }}
@@ -45,7 +45,7 @@ function WishlistBook() {
                 </button>
 
                 <button
-                  className="bg-gray-700 px-5 py-2 font-semibold text-white text-2xl hover:bg-orange-400"
+                  className="bg-gray-700 px-2 py-2 font-semibold text-white text-sm hover:bg-orange-400"
                   onClick={() => {
                     handleDelete(book.id);
                   }}
@@ -70,7 +70,7 @@ function WishListInside() {
       <div id="background" className="  h-auto w-[85%] mx-auto mt-10 ">
         <div
           id="title-container"
-          className="bg-white w-full  inline-block h-auto shadow-md text-xl font-bold text-gray-600 p-10 rounded"
+          className="bg-white w-full  inline-block h-auto shadow-md text-xl font-bold text-gray-600 p-8 rounded"
         >
           <h1>My Wish List</h1>
         </div>
@@ -81,7 +81,7 @@ function WishListInside() {
             className=" h-8 border-gray-300 border-2  my-2 px-4 rounded "
             placeholder="Enter name or e-mail"
           ></input>
-          <button className="bg-blue-700 w-40 text-white h-8 mx-1 rounded ">
+          <button className="bg-blue-700 w-32 text-white h-8 mx-1 rounded ">
             GO!
           </button>
           <h3 className="text-gray-500 font-semibold">
