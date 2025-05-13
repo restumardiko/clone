@@ -32,30 +32,30 @@ function Cart() {
       </Link>
       <div
         id="drop-down"
-        className=" hidden lg:absolute bg-red-700 w-[23%] -ml-64 lg:p-5 lg:top-8 lg:mt-20 lg:group-hover:block min-h-40 shadow-lg lg:hidden z-10 text-white lg:text-sm"
+        className=" opacity-0 lg:absolute bg-red-700 w-[23%] -ml-64 lg:p-3 lg:top-7 lg:mt-20 lg:group-hover:opacity-100 min-h-40 shadow-lg transition-opacity delay-100  z-10 text-white lg:text-sm  "
       >
-        <div id="drop-down-header " className=" ">
-          <b className="flex flex-row justify-between my-6">
+        <div id="drop-down-header " className="text-xs ">
+          <div className="flex flex-row justify-between my-3 font-semibold">
             <span className=" mx-3 text-left">{cart.length} ITEMS(S)</span>
             <span className="text-right mx-3">SHOPING CART</span>
-          </b>
-          <div className="w-full h-[0.1rem] my-4  bg-white"></div>
+          </div>
+          <div className="w-full h-[0.01rem] my-1  bg-white"></div>
         </div>
 
         <ul>
           {cart.length <= 3 ? (
             <div>
               {cart.map((x) => (
-                <li key={x.id} className="text-2xl ">
+                <li key={x.id} className="text-sm ">
                   <span className="flex justify-between flex-row">
                     <div>
                       <span className="block">{x.title}</span>
                       <span>1=Rp.{x["price"].toLocaleString()}</span>
                     </div>
 
-                    <img className="w-28" src={x.cover} alt="" />
+                    <img className="w-16" src={x.cover} alt="" />
                   </span>
-                  <div className="w-full h-[0.1rem] my-4  bg-white"></div>
+                  <div className="w-full h-[0.01rem] my-1  bg-white"></div>
                 </li>
               ))}
             </div>
@@ -63,27 +63,27 @@ function Cart() {
             <>
               <div>
                 {cart.slice(0, 3).map((x) => (
-                  <li key={x.id} className="text-2xl ">
+                  <li key={x.id} className="text-sm ">
                     <span className="flex justify-between flex-row">
                       <div>
                         <span className="block">{x.title}</span>
                         <span>1=Rp.{x["price"].toLocaleString()}</span>
                       </div>
 
-                      <img className="w-28" src={x.cover} alt="" />
+                      <img className="w-16" src={x.cover} alt="" />
                     </span>
-                    <div className="w-full h-[0.1rem] my-4  bg-white"></div>
+                    <div className="w-full h-[0.1rem] my-1  bg-white"></div>
                   </li>
                 ))}
               </div>{" "}
               <Link className=" " to="/cart">
-                <button className="inline text-xl">
+                <button className="inline text-sm">
                   View more
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="size-5 inline"
+                    className="size-3 inline"
                   >
                     <path
                       fillRule="evenodd"
@@ -104,12 +104,12 @@ function Cart() {
         <span>
           {cart.length != 0 ? (
             <>
-              <b className="flex flex-row justify-between text-2xl text-black">
+              <b className="flex flex-row justify-between text-sm text-gray-900">
                 <span>Total:</span>
                 <span>Rp. {harga.toLocaleString()}</span>
               </b>
-              <button className="block w-[90%] h-20 bg-black mx-auto mt-10">
-                <b>PROCEED TO CHECKOUT</b>
+              <button className="block w-[90%] h-10 bg-gray-900 mx-auto mt-5 font-semibold">
+                PROCEED TO CHECKOUT
               </button>
             </>
           ) : (

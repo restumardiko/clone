@@ -45,7 +45,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
           >
             <div
               id="single-book"
-              className="group w-44 lg:w-38 h-full lg:h-[90%]  mx-auto my-4 text-sm overflow-hidden "
+              className="group w-44 lg:w-38 h-full lg:h-[94%]  mx-auto my-4 text-sm overflow-hidden "
             >
               <button className="block mx-auto">
                 <img
@@ -75,9 +75,9 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
                 </h4>
               </div>
 
-              <div className="lg:mt-28 hidden lg:block  lg:group-hover:mt-0 ease-in duration-300 text-red-600 text-sm font-bold ">
+              <div className="lg:mt-28 hidden lg:block py-2  lg:group-hover:mt-0 ease-in duration-300 text-red-600 text-sm font-bold ">
                 <button
-                  className="border-r-2 border-solid  px-4"
+                  className="border-r-[0.06rem] border-solid  px-4"
                   onClick={() => {
                     handleBuyNow(book);
                   }}

@@ -49,21 +49,21 @@ export default function SingleBookInside() {
             <div className="flex flex-col items-center  ">
               <button
                 onClick={() => handelCart(book)}
-                className="rounded-lg bg-blue-700 w-32 p-2  text-center text-[0.7rem] text-white font-bold my-2"
+                className="rounded-lg bg-blue-700 w-32 p-2  text-center text-[0.7rem] text-white font-bold my-2 lg:hover:bg-orange-500"
               >
                 ADD TO CART
               </button>
 
               <button
                 onClick={() => handelWish(book)}
-                className="rounded-lg bg-gray-300 w-32 p-2  text-center text-[0.7rem] text-gray-700 font-bold my-2 "
+                className="rounded-lg bg-gray-300 w-32 p-2  text-center text-[0.7rem] text-gray-700 lg:hover:text-white font-bold my-2 lg:hover:bg-orange-500   "
               >
                 ADD TO WISHLIST
               </button>
 
               <button
                 onClick={() => handleBuyNow(book)}
-                className="rounded-lg bg-red-600 w-32 p-2  text-center text-[0.7rem] text-white font-bold my-2 "
+                className="rounded-lg bg-red-600 w-32 p-2  text-center text-[0.7rem] text-white font-bold my-2 lg:hidden "
               >
                 BUY NOW
               </button>
