@@ -9,14 +9,12 @@ function Subnav() {
   const [isCategorySpread, setIsCategorySpread] = useState(false);
   const [isBargainSpread, setIsBargain] = useState(false);
   function handleCategory() {
-    console.log("handleCategory");
     setIsCategorySpread(!isCategorySpread);
-    console.log(isCategorySpread);
   }
   function handleBargain() {
-    console.log("handleBargain");
+    // console.log("handleBargain");
     setIsBargain(!isBargainSpread);
-    console.log(!isBargainSpread);
+    // console.log(!isBargainSpread);
   }
   return (
     <div

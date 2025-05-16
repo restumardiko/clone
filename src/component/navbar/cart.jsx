@@ -4,12 +4,10 @@ import { BookContext } from "../App";
 
 function Cart() {
   const { cart } = useContext(BookContext);
-  const [move, setMove] = useState(-2.5);
-  console.log("ini", move);
+  const [move, setMove] = useState(-3);
 
   const handleHover = () => {
     setMove(3);
-    console.log("on 1");
   };
   const getMoveByCartLength = (len) => {
     if (len === 0) return -3;
@@ -21,13 +19,10 @@ function Cart() {
     setMove(getMoveByCartLength(cart));
   };
 
-  let harga = 0;
-  console.log("cartlength", cart.length);
-
-  cart.map((each) => (harga += each.price));
+  let harga = cart.reduce((acc, item) => acc + item.price, 0);
   return (
     <div
-      onMouseMove={handleHover}
+      onMouseEnter={handleHover}
       onMouseLeave={handleUnhover}
       className="group"
     >
@@ -35,7 +30,7 @@ function Cart() {
         <h1 className="static text-xs  text-white text-end pb-[0.22rem] lg:text-sm  ">
           {cart.length}
         </h1>
-        <div className="relative px-2 -top-[0.6rem] lg:-top-[0.8rem] ">
+        <div className="relative px-2 -top-[0.6rem] lg:-top-[0.8rem]  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -53,11 +48,10 @@ function Cart() {
         </div>
       </Link>
       <div
-        id="drop-down-header "
         style={{ top: `${move}rem` }}
-        className="lg:absolute bg-red-700 w-[23%] -ml-64 lg:p-3 group  lg:mt-14 invisible md:visible opacity-0 lg:group-hover:opacity-100  shadow-lg transition-all  delay-200 duration-700  -z-10 text-white lg:text-sm"
+        className="absolute bg-red-700 w-[23%] -ml-64 lg:p-3 lg:mt-14 invisible lg:visible sm:opacity-0 lg:group-hover:opacity-100 shadow-lg transition-all  delay-200 duration-700  -z-10 text-white lg:text-sm"
       >
-        <div id="drop-down-header " className="text-xs ">
+        <div id=" " className="text-xs ">
           <div className="flex flex-row justify-between my-3 font-semibold">
             <span className=" mx-3 text-left">{cart.length} ITEMS(S)</span>
             <span className="text-right mx-3">SHOPING CART</span>

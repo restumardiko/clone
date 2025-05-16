@@ -18,11 +18,11 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   }
 
   const fStartRunning = () => {
-    console.log(interv.current);
+    // console.log(interv.current);
     if (isSpread) {
       return;
     } else {
-      console.log("starting scroll");
+      // console.log("starting scroll");
       if (interv.current === null) {
         interv.current = setInterval(() => {
           setCurrentIndex((prev) =>

@@ -27,13 +27,11 @@ function App() {
   const [wish, setWish] = useState([]);
   const [buy, setBuy] = useState([]);
   const handleRemove = (id) => {
-    console.log("this fucking button remove is clicked");
     setCart(cart.filter((book) => book.id !== id));
   };
 
   const handleChange = (e) => {
     //e.preventDefault();
-    console.log(search);
 
     setSearch(e.target.value);
     if (e.target.value != "") {
@@ -56,12 +54,10 @@ function App() {
     });
   };
   const handleBuyNow = (param) => {
-    console.log(param);
     setBuy(param);
     navigate("/buynow");
   };
   const handleDelete = (id) => {
-    console.log("handle delete on ");
     setWish(wish.filter((book) => book.id !== id));
   };
 

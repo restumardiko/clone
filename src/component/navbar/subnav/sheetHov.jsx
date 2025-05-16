@@ -1,8 +1,7 @@
 function SheetHov({ list }) {
-  console.log(list);
   const ls = list.map((yea) => (
     // eslint-disable-next-line react/jsx-key
-    <li className="lg:hover:bg-red-700 lg:w-full ">
+    <li key={yea} className="lg:hover:bg-red-700 lg:w-full ">
       <button className="lg:p-3 lg:hover:text-white">{yea}</button>
     </li>
   ));

@@ -7,7 +7,7 @@ function Input() {
   const { handleChange } = useContext(BookContext);
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(search === "");
+
     // navigate("/search", { replace: true });
 
     // handle(search);

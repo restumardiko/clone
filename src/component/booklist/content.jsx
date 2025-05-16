@@ -3,10 +3,9 @@ import { useState } from "react";
 
 export default function Content({ data }) {
   const [spread, setSpread] = useState("spread");
-  console.log(spread);
 
   const onViewMore = (e) => {
-    console.log(e.target);
+    //console.log(e.target);
     if (spread === "spread") {
       const etok = e.target.id;
       setSpread(() => {

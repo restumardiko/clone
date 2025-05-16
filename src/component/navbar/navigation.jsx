@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function NavSub({ title }) {
-  console.log(title);
-
   // Tentukan link berdasarkan title
   let pageLink;
   if (title === "Wish List") {

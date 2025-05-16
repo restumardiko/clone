@@ -17,7 +17,7 @@ export default function BuyNow() {
     quantity !== 1 && setQuantity(quantity - 1);
   }
   function checkout() {}
-  console.log(buy);
+
   return (
     <div className="pt-[7.2rem] lg:pt-[6.8rem]">
       <NavSub title={"Buy Now"} />

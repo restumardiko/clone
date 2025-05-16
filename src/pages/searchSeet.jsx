@@ -8,8 +8,8 @@ import Footer from "../component/footer/footer";
 export default function SearchSeet() {
   const { handleBuyNow, search } = useContext(BookContext);
 
-  console.log(data["books"]);
-  console.log(search);
+  // console.log(data["books"]);
+  // console.log(search);
   const datas = data.books.filter((data) => {
     return data.title.toLowerCase().includes(search.toLowerCase());
   });

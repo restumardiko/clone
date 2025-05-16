@@ -6,7 +6,7 @@ import Footer from "../component/footer/footer";
 export default function SingleBookInside() {
   const { handleBuyNow, handelCart, handelWish } = useContext(BookContext);
   const location = useLocation();
-  console.log(location);
+  //console.log(location);
   const book = location.state;
   return (
     <div id="background" className="pt-36 ">

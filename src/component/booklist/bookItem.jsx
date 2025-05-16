@@ -1,20 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BookContext } from "../App";
 import { useNavigate } from "react-router-dom";
-import { FunctionSquare } from "lucide-react";
 
 function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
   const { handelCart, handleBuyNow, handelWish } = useContext(BookContext);
 
   const navigate = useNavigate();
   function handelSingleBook(param) {
-    // console.log(param);
     navigate("/book_detail", { state: param });
   }
 
   let isSpread = spread === "View More" ? false : true;
-
-  console.log(hem);
 
   return (
     <div

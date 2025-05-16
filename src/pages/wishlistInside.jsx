@@ -5,57 +5,53 @@ import NavSub from "../component/navbar/navigation";
 
 function WishlistBook() {
   const { wish, handleDelete } = useContext(BookContext);
-  console.log(wish.length);
-  //const[]
 
   return (
     <ul className=" flex flex-col gap-4 ">
       {wish.map((book) => (
-        <>
-          <li
-            key={book.id}
-            className="h-auto m-2 p-3 lg:gap-3  flex md:flex-row flex-col border-b-[0.1rem] border-gray-300"
-          >
-            <img
-              className="  md:h-40 w-24 mx-auto  inline md:mx-3 shadow-md"
-              src={book.cover}
-              alt=""
-            />
-            <div className="inline-block w-full p-2">
-              <h1 className="text-sm font-semibold my-2">{book.title}</h1>
-              <h2 className="text-sm font-semibold italic text-gray-500 my-1">
-                Paperback
-              </h2>
-              <h1 className="font-semibold text-blue-700 text-sm">
-                {book.author}
-              </h1>
-              <h1 className="text-red-600 font-semibold text-md">
-                Rp. {book["price"].toLocaleString()}
-              </h1>
+        <li
+          key={book.id}
+          className="h-auto m-2 p-3 lg:gap-3  flex md:flex-row flex-col border-b-[0.1rem] border-gray-300"
+        >
+          <img
+            className="  md:h-40 w-24 mx-auto  inline md:mx-3 shadow-md"
+            src={book.cover}
+            alt=""
+          />
+          <div className="inline-block w-full p-2">
+            <h1 className="text-sm font-semibold my-2">{book.title}</h1>
+            <h2 className="text-sm font-semibold italic text-gray-500 my-1">
+              Paperback
+            </h2>
+            <h1 className="font-semibold text-blue-700 text-sm">
+              {book.author}
+            </h1>
+            <h1 className="text-red-600 font-semibold text-md">
+              Rp. {book["price"].toLocaleString()}
+            </h1>
 
-              <h1 className="text-sm py-2">Shared this item ?</h1>
-              <div className="py-1">
-                <button
-                  className="text-sm py-1 px-5"
-                  onClick={() => {
-                    handleEdite(book.id);
-                  }}
-                >
-                  EDIT
-                </button>
+            <h1 className="text-sm py-2">Shared this item ?</h1>
+            <div className="py-1">
+              <button
+                className="text-sm py-1 px-5"
+                // onClick={() => {
+                //   handleEdite(book.id);
+                // }}
+              >
+                EDIT
+              </button>
 
-                <button
-                  className="bg-gray-700 px-2 py-2 font-semibold text-white text-sm hover:bg-orange-400"
-                  onClick={() => {
-                    handleDelete(book.id);
-                  }}
-                >
-                  DELETE
-                </button>
-              </div>
+              <button
+                className="bg-gray-700 px-2 py-2 font-semibold text-white text-sm hover:bg-orange-400"
+                onClick={() => {
+                  handleDelete(book.id);
+                }}
+              >
+                DELETE
+              </button>
             </div>
-          </li>
-        </>
+          </div>
+        </li>
       ))}
     </ul>
   );

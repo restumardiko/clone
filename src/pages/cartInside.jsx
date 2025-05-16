@@ -4,7 +4,6 @@ import NavSub from "../component/navbar/navigation";
 import { Link } from "react-router-dom";
 
 export default function CartInside({ cart, handleRemove }) {
-  console.log("sikamanis", cart);
   function getInitialCartData(cart) {
     const initialDataCart = {};
     cart.forEach((element) => {
@@ -15,31 +14,21 @@ export default function CartInside({ cart, handleRemove }) {
   const [quantity, setQuantity] = useState(getInitialCartData(cart));
 
   function plus(id) {
-    console.log("plus");
-    console.log(quantity[id]);
-    console.log(quantity);
     setQuantity((ea) => {
       return { ...ea, [id]: ea[id] + 1 };
     });
   }
 
   function minus(id) {
-    console.log("minus");
-    console.log(id);
-    console.log("plus");
-    console.log(quantity[id]);
     setQuantity((ea) => {
       return { ...ea, [id]: Math.max(ea[id] - 1, 1) };
     });
   }
-  function checkout() {
-    console.log("checkout");
-    console.log(quantity);
-  }
+  function checkout() {}
   let harga = 0;
   cart.map((each) => {
     // console.log(quantity[each.id]);
-    console.log(quantity[each.id] * each.price);
+    //console.log(quantity[each.id] * each.price);
     harga += quantity[each.id] * each.price;
   });
 
