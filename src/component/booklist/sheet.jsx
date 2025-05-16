@@ -28,7 +28,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
           setCurrentIndex((prev) =>
             prev === datas.books.length ? -6 : prev + 1
           );
-        }, 200000);
+        }, 2000);
         //setIsRunning(true);
       }
     }
@@ -37,7 +37,7 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   useEffect(() => {
     interv.current = setInterval(() => {
       setCurrentIndex((prev) => (prev === datas.books.length ? -6 : prev + 1));
-    }, 200000);
+    }, 2000);
     //setIsRunning(true);
     return () => clearInterval(interv.current); // Clear interval when component unmounts
   }, [datas.books]);
@@ -49,6 +49,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
   };
 
   const handlePrev = () => {
+    fStopRunning();
+    fStartRunning();
     //e.preventDefault();
 
     setCurrentIndex((prev) => {
@@ -60,6 +62,8 @@ function Sheet({ datas, sheetName, handleBuyNow, onViewMore, spread }) {
     });
   };
   const handleNext = () => {
+    fStopRunning();
+    fStartRunning();
     // e.preventDefault();
 
     setCurrentIndex((prev) => (prev === datas.books.length ? -6 : prev + 1));

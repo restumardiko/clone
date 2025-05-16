@@ -37,7 +37,7 @@ function BookItem({ data, hem, spread, fStopRunning, fStartRunning }) {
             className={
               hem === -6 || hem === 12
                 ? "  transition duration-0 h-auto lg:h-96    "
-                : "  transition duration-2000 h-auto lg:h-96  "
+                : "  transition duration-1000  h-auto lg:h-96  "
             }
             onMouseEnter={() => fStopRunning()}
             onMouseLeave={() => fStartRunning()}

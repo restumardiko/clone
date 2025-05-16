@@ -1,14 +1,36 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookContext } from "../App";
 
 function Cart() {
   const { cart } = useContext(BookContext);
+  const [move, setMove] = useState(-2.5);
+  console.log("ini", move);
+
+  const handleHover = () => {
+    setMove(3);
+    console.log("on 1");
+  };
+  const getMoveByCartLength = (len) => {
+    if (len === 0) return -3;
+    if (len === 1) return -13;
+    return -20;
+  };
+
+  const handleUnhover = () => {
+    setMove(getMoveByCartLength(cart));
+  };
+
   let harga = 0;
-  console.log(cart);
+  console.log("cartlength", cart.length);
+
   cart.map((each) => (harga += each.price));
   return (
-    <div className="group   ">
+    <div
+      onMouseMove={handleHover}
+      onMouseLeave={handleUnhover}
+      className="group"
+    >
       <Link className=" " to="/cart">
         <h1 className="static text-xs  text-white text-end pb-[0.22rem] lg:text-sm  ">
           {cart.length}
@@ -31,19 +53,20 @@ function Cart() {
         </div>
       </Link>
       <div
-        id="drop-down"
-        className=" opacity-0 lg:absolute bg-red-700 w-[23%] -ml-64 lg:p-3 lg:top-7 lg:mt-20 lg:group-hover:opacity-100 min-h-40 shadow-lg transition-opacity delay-100  z-10 text-white lg:text-sm  "
+        id="drop-down-header "
+        style={{ top: `${move}rem` }}
+        className="lg:absolute bg-red-700 w-[23%] -ml-64 lg:p-3 group  lg:mt-14 invisible md:visible opacity-0 lg:group-hover:opacity-100  shadow-lg transition-all  delay-200 duration-700  -z-10 text-white lg:text-sm"
       >
         <div id="drop-down-header " className="text-xs ">
           <div className="flex flex-row justify-between my-3 font-semibold">
             <span className=" mx-3 text-left">{cart.length} ITEMS(S)</span>
             <span className="text-right mx-3">SHOPING CART</span>
           </div>
-          <div className="w-full h-[0.01rem] my-1  bg-white"></div>
+          <div className="w-full h-[0.08rem] my-2  bg-white"></div>
         </div>
 
         <ul>
-          {cart.length <= 3 ? (
+          {cart.length <= 2 ? (
             <div>
               {cart.map((x) => (
                 <li key={x.id} className="text-sm ">
@@ -55,14 +78,14 @@ function Cart() {
 
                     <img className="w-16" src={x.cover} alt="" />
                   </span>
-                  <div className="w-full h-[0.01rem] my-1  bg-white"></div>
+                  <div className="w-full h-[0.08rem] my-1  bg-white"></div>
                 </li>
               ))}
             </div>
           ) : (
             <>
               <div>
-                {cart.slice(0, 3).map((x) => (
+                {cart.slice(0, 2).map((x) => (
                   <li key={x.id} className="text-sm ">
                     <span className="flex justify-between flex-row">
                       <div>
@@ -72,7 +95,7 @@ function Cart() {
 
                       <img className="w-16" src={x.cover} alt="" />
                     </span>
-                    <div className="w-full h-[0.1rem] my-1  bg-white"></div>
+                    <div className="w-full h-[0.08rem] my-1  bg-white"></div>
                   </li>
                 ))}
               </div>{" "}
@@ -108,7 +131,7 @@ function Cart() {
                 <span>Total:</span>
                 <span>Rp. {harga.toLocaleString()}</span>
               </b>
-              <button className="block w-[90%] h-10 bg-gray-900 mx-auto mt-5 font-semibold">
+              <button className="block w-[90%] h-10 bg-gray-900 mx-auto mt-5 font-semibold hover:bg-orange-600 ">
                 PROCEED TO CHECKOUT
               </button>
             </>
