@@ -1,12 +1,7 @@
-import "./App.css";
-// import Content from "./booklist/content";
-import Navbar from "./navbar/navbar";
-import Conconfoot from "./conconfoot";
-// import Footer from "./footer/footer";
-// import Container from "./containContainer";
+//import "./App.css";
 
-// import Iklan from "./iklan/iklan";
-// import data from "../utils";
+import Conconfoot from "./conconfoot";
+
 import { createContext, StrictMode, useState } from "react";
 //import { Container } from "postcss";
 import { Route, Routes } from "react-router-dom";
