@@ -4,18 +4,18 @@ export default function Footer() {
       <div className="image flex flex-col  lg:flex-row h-auto  text-center ">
         <div id="shiping" className=" inline-block  lg:w-[25%]  ">
           <h1 className="text-xl"> Delivered By :</h1>
-          <img className="h-20 my-4 mx-auto" src="src/shipping.png" alt="" />
+          <img className="h-20 my-4 mx-auto" src="/shipping.png" alt="" />
         </div>
         <div id="payment" className="inline-block lg:w-[25%] h-auto">
           <h1 className="lg:inline text-xl  ">Payment Method :</h1>
-          <img className="mx-auto h-20 my-4" src="src/payments.png" alt="" />
+          <img className="mx-auto h-20 my-4" src="/payments.png" alt="" />
         </div>
         <div className="inline-block lg:w-[25%] h-full p-4">
-          <img className="h-24 mx-auto lg:my-4" src="src/banks.png" alt="" />
+          <img className="h-24 mx-auto lg:my-4" src="/banks.png" alt="" />
         </div>
         <div className="secured-by inline-block lg:w-[25%] h-full ">
           <h1 className="text-xl"> Secured by :</h1>
-          <img className="mx-auto my-4 h-10" src="src/digicert.png" alt="" />
+          <img className="mx-auto my-4 h-10" src="/digicert.png" alt="" />
         </div>
       </div>
       <div className="contact-container flex h-auto py-4 text-gray-900 text-sm font-normal  flex-col lg:flex-row">

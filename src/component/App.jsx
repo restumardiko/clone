@@ -70,7 +70,7 @@ function App() {
         buy,
       }}
     >
-      <div className="periplusApp w-full bg-[url('src/download.jpeg')] overflow-x-hidden  ">
+      <div className="periplusApp w-full bg-[url('/download.jpeg')] overflow-x-hidden  ">
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Conconfoot />} />
