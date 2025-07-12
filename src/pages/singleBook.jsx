@@ -34,7 +34,7 @@ export default function SingleBookInside() {
         <div className="shipping flex md:py-4  flex-col md:justify-between lg:items-center md:w-[30%]  ">
           <div className="m-4 md:m-0 rounded-md bg-slate-100 w-[80%] md:w-full lg:w-[75%] py-4 mx-auto">
             <div className=" flex flex-row justify-center py-4">
-              <img className=" my-auto" src="./src/plane.webp" alt="" />
+              <img className=" my-auto" src="./plane.webp" alt="" />
 
               <div className=" ml-2 text-center ">
                 <h1 className="text-lg font-semibold">Free Shipping</h1>
