@@ -7,7 +7,7 @@ const data = {
         title: "The Invisible Life of Addie LaRue",
         author: "V.E. Schwab",
         year: 2020,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:200000
 
       },
@@ -16,7 +16,7 @@ const data = {
         title: "Project Hail Mary",
         author: "Andy Weir",
         year: 2021,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:250000
 
       },
@@ -25,7 +25,7 @@ const data = {
         title: "The Midnight Library",
         author: "Matt Haig",
         year: 2020,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:290000
 
       },
@@ -34,7 +34,7 @@ const data = {
         title: "Where the Crawdads Sing",
         author: "Delia Owens",
         year: 2018,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:300000
 
       },
@@ -43,7 +43,7 @@ const data = {
         title: "Atomic Habits",
         author: "James Clear",
         year: 2018,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:200000
 
       },
@@ -52,7 +52,7 @@ const data = {
         title: "Becoming",
         author: "Michelle Obama",
         year: 2018,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:280000
 
       },
@@ -61,7 +61,7 @@ const data = {
         title: "The Four Winds",
         author: "Kristin Hannah",
         year: 2021,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:240000
 
       },
@@ -70,7 +70,7 @@ const data = {
         title: "Dune",
         author: "Frank Herbert",
         year: 1965,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:220000
 
       },
@@ -79,7 +79,7 @@ const data = {
         title: "The Vanishing Half",
         author: "Brit Bennett",
         year: 2020,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:100000
 
       },
@@ -88,7 +88,7 @@ const data = {
         title: "Educated",
         author: "Tara Westover",
         year: 2018,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:340000
 
       },
@@ -97,7 +97,7 @@ const data = {
         title: "The Silent Patient",
         author: "Alex Michaelides",
         year: 2019,
-         cover: "/Time Travel Books.jpg",
+         cover: "/Time Travel Books.webp",
         price:210000
 
       },
@@ -106,7 +106,7 @@ const data = {
         title: "Circe",
         author: "Madeline Miller",
         year: 2018,
-        cover: "/Time Travel Books.jpg",
+        cover: "/Time Travel Books.webp",
         price:400000
         
       }

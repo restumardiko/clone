@@ -5,7 +5,7 @@ export default function AccountInside() {
     <div id="container" className="m-auto bg-white h-full  ">
       <Link to="/">
         <div id="titel">
-          <img className="w-44 m-auto py-4" src="/logo-periplus.jpg" alt="" />
+          <img className="w-44 m-auto py-4" src="/logo-periplus.webp" alt="" />
         </div>
       </Link>
 
@@ -70,7 +70,7 @@ export default function AccountInside() {
         </div>
         <div className="text-center text-xs text-gray-600 mt-2">
           <b>Or Login With</b>
-          <img src="/google.png" className="w-28 mx-auto my-5" />
+          <img src="/google.webp" className="w-28 mx-auto my-5" />
         </div>
       </div>
       <div className="text-center text-[0.7rem] text-gray-500">
